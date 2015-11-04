@@ -1,40 +1,3 @@
-<!--
-
-<div class="middle" style="background-color:#E5E4E2;width: 1200px">
-
-    <table style="width: 60%"><tr>
-        <td>
-
-            <div id="infocontainer">
-                <div class=row> <div class=col-md-6>
-                    <input id=name ng-model=myForm.name > Name <br/>
-                    <input id=email ng-model=myForm.email > Email <br/>
-                    <input id=phone ng-model=myForm.phone > Phone <br/>
-                    <input id=password ng-model=myForm.pass > password <br/>
-                    <input id=address ng-model=myForm.add > Address <br/>
-                    <input id=city ng-model=myForm.city > City <br/>
-                    <label for="text">Family Biography</label>:
-                    <textarea id="text" cols="70" rows="7" my-maxlength="5" ng-model="textareaText">Family Bio</textarea>
-                    <button ng-click="myForm.submitTheForm()">Submit Form</button> </div> </div>
-            </div>
-
-        </td>
-    </tr>
-
-    </table>
-
-    <a href="#/register/family/conformation" class="btn btn-primary">Submit</a>
-
-</div>
--->
-
-
-
-
-
-
-
-
 <div class="middle">
     <div  style="padding-left: 250px;padding-top: 80px">
         <table style="width: 80%">
@@ -81,12 +44,77 @@
                             <label for="password"> Password </label> <br/>
                             <input id="password" type="password" ng-model="myForm.password" >
                         </div>
+
+
+                        <div>
+                            <label for="childern"> Children</label> <br/>
+                            <select name="childern" id="childern" ng-model="data.singleSelect">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="10more">10+</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="biography"> Biography </label> <br/>
+                            <textarea id="biography" ng-model="message" cols="40" rows="10"></textarea>
+                        </div>
                     </div>
 
-                    <div id="profilepic" style="padding-left: 350px;">
-                        Upload Picture <br/>
-                        <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+                    <div id="wishlist" style="float: right">
+
+
+                        <table>
+                            <tr>
+                                <td>Child
+
+                                </td>
+                                <td>
+                                    wishList
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Name <input id="childname" ng-model="child.name" /><br/>
+                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+                                </td>
+                                <td>
+
+                                    wishlist 1  <input id="wishlist1" ng-model=child.wishlist1 />
+                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                                    <br/>
+
+                                    wishlist 2  <input id="wishlist2" ng-model="child.wishlist2" />
+                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                                    <br/>
+
+                                    wishlist 3 <input id="wishlist3" ng-model="child.wishlist3" />
+                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                                    <br/>
+
+                                </td>
+                            </tr>
+
+
+
+                        </table>
+
+
+
                     </div>
+
+
                 </td>
             </tr>
         </table>
@@ -97,6 +125,3 @@
            class="btn btn-primary">Submit</a>
     </div>
 </div>
-
-
-
