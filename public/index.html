@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html ng-app="app">
 <head>
 	<meta charset='utf-8'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
 
 </head>
 
-<body ng-app="app"  style="background-color:#00FFFF" ng-controller="RootController">
+<body style="background-color:#00FFFF" ng-controller="RootController">
 
 <div id="login">
 	<div>
@@ -33,6 +33,8 @@
 <div ng-view ></div>
 <div class="footer">Footer</div>
 
+
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-route.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-sanitize.js"></script>

@@ -31,7 +31,8 @@ angular.module('app', ['ngRoute', 'ui.bootstrap','ngMessages', 'register', 'logi
 
 		$routeProvider.when('/register/donar', {
 			templateUrl: 'view/register/donar.html',
-			controller: 'RegisterDonarController'
+			controller: 'RegisterDonarController',
+			controllerAs: 'vm'
 		});
 
 		$routeProvider.when('/register/donar/conformation', {

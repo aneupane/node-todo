@@ -1,73 +1,97 @@
+<div class="middle">
+  <div  style="padding-left: 250px;padding-top: 80px">
+    <table style="width: 80%">
+      <tr>
+        <td>
+          <div id="donateForm" style="float: left">
+            <div>
+              <label for="name">Name</label><br/>
+              <input id="name" ng-model="myForm.name" />
+            </div>
 
-<div ng-app="register" class="middle" style="background-color:#E5E4E2;width: 1200px">
+            <div >
+              <label for="address">Address</label> <br/>
+              <input id="address" ng-model="myForm.address" />
+            </div>
 
-  <table style="width: 60%"><tr>
-    <td>
-
-      <div id="infocontainer">
-        <div class=row> <div class=col-md-6>
-          <input id=name ng-model=myForm.name > Name <br/>
-          <input id=email ng-model=myForm.email > Email <br/>
-          <input id=phone ng-model=myForm.phone > Phone <br/>
-          <input id=password ng-model=myForm.pass > password <br/>
-          <input id=address ng-model=myForm.add > Address <br/>
-          <input id=city ng-model=myForm.city > City <br/>
-          <label for="text">Family Biography</label>:
-          <textarea id="text" cols="70" rows="7" my-maxlength="5" ng-model="textareaText">Family Bio</textarea>
-          <button ng-click="myForm.submitTheForm()">Submit Form</button> </div> </div>
-      </div>
-
-    </td>
-    <td>
-
-      <div id="piccontainer">
-
-        <table>
-         <tr>
-           <td>child
-
-           </td>
-           <td>
-             wishList
-           </td>
-          </tr>
-          <tr>
-            <td>
-              Name <input id=email ng-model=myForm.email ><br/>
-              <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+            <div>
+              <label for="city">City</label> <br/>
+              <input id="city" ng-model="myForm.city" />
+            </div>
 
 
-            </td>
-            <td>
+            <div>
+              <label for="zipcode">Zip Code</label> <br/>
+              <input id="zipcode" ng-model=myForm.zipcode" />
+            </div>
 
-              Item 1  <input id=email ng-model=myForm.email >
-              <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-              <br/>
+            <div>
+              <label for="phoneno">Phone No</label> <br/>
+              <input id="phoneno" ng-model="myForm.phoneno" />
+            </div>
 
-              Item 2  <input id=email ng-model=myForm.email >
-              <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-              <br/>
+            <div>
+              <label for="email">Email Address </label> <br/>
+              <input id="email" ng-model=myForm.email />
+            </div>
 
-              Item 3  <input id=email ng-model=myForm.email >
-              <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-              <br/>
+            <div>
+              <label for="username"> UserName</label> <br/>
+              <input id="username" ng-model="myForm.username" />
+            </div>
 
-            </td>
-          </tr>
+            <div>
+              <label for="password"> Password </label> <br/>
+              <input id="password" type="password" ng-model="myForm.password" >
+            </div>
+          </div>
 
+          <div id="profilepic" style="padding-left: 350px;">
+            Upload Picture <br/>
+            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-
-        </table>
-
-
-      </div>
-
-    </td>
-  </tr>
-  </table>
-
-
-  <a href="#/register/donar/conformation" class="btn btn-primary">Submit</a>
-
+  <div style="padding-left: 550px;padding-top: 20px">
+    <a href="#/register/donar/conformation"
+       class="btn btn-primary">Submit</a>
+  </div>
 </div>
 
+
+
+
+
+<!--
+
+<div class="middle">
+  <div style="width: 50%">
+  <div class="col-md-6 col-md-offset-3">
+    <form name="form" ng-submit="vm.register()" role="form">
+      <div class="form-group">
+        <label for="username">First name</label>
+        <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+        <label for="username">Last name</label>
+        <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+      </div>
+      <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+        <a href="#/login" class="btn btn-link">Cancel</a>
+      </div>
+    </form>
+  </div>
+  </div>
+ </div>-->
