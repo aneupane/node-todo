@@ -1,29 +1,26 @@
 
 <div  class="middle" >
-    <div class="list-group middle"  style="height: 80%">
-        <!--  Product Container  -->
-        <div class="list-group-item" ng-repeat="product in products">
-            <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+    <div style="padding-top: 50px;overflow:auto">
+        <div class="list-group middle"  style="height: 90%;width:60%;padding-left: 350px;">
+            <!--  Product Container  -->
+            <div class="list-group-item" ng-style="myStyle"
+                 ng-repeat="product in products" ng-click="doDecorate(product)">
+                <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
-            <!-- Image Gallery  -->
-            <div class="gallery">
-                <div class="img-wrap">
-                    <img ng-src="{{product.images[0]}}" />
-                </div>
-                <ul class="img-thumbnails clearfix">
-                    <li class="small-image pull-left thumbnail" >
+                <!-- Image Gallery  -->
+                <div class="gallery">
+                    <div class="img-wrap">
                         <img ng-src="{{product.images[0]}}" />
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-
-
     </div>
-
-
-    <a href="#/donate/familydonation" class="btn btn-primary">  Select Family </a>
+</div>
+<div style="padding-left: 450px;padding-top: 20px;">
+<!--    <a href="#/donate/familydonation" class="btn btn-primary">Select Family </a>-->
+    <a ng-click="getFamily()" class="btn btn-primary">Select Family </a>
 </div>
 
 

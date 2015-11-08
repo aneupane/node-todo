@@ -1,8 +1,38 @@
 ﻿
 angular.module('donate')
-    .controller('StoreController', ['$scope',
+    .controller('StoreController',  ['$scope', '$location','FamilyService',
 
-        function ($scope) {
+        function ($scope , $location , FamilyService) {
+
+            $scope.doDecorate= function (product) {
+
+                var p= product.name;
+
+                $scope.myStyle = {
+                    "border-style": "solid",
+                    "border-width": "2px 10px 4px 20px",
+                    "border-color":"#4a4a4a"
+                };
+
+                alert(String(p));
+            };
+
+
+            $scope.getFamily = function (){
+
+                var familyId= "123";
+                FamilyService.setFamilyId(familyId);
+
+                $location.path('/donate/familydonation');
+
+            };
+
+
+            $scope.submitDonate = function(){
+                $scope.path('/donate/conformation');
+            };
+
+
             $scope.products
                 = [{
                 name: 'Azurite',
@@ -44,11 +74,6 @@ angular.module('donate')
                     "images/donate.jpeg"
                 ]
             }];
-
-
-
-
-
 
             var init = function () {
             };

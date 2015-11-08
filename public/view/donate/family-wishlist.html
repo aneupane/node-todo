@@ -1,0 +1,43 @@
+<div  class="middle" >
+
+
+    <div> Family Donation Page </div>
+
+    <div style="width: 70%;height: 90%;padding-left: 30%">
+
+        <table style="width: 100%;height: 100%;padding-left: 10%;
+        border-style: solid; border-width: 5px;border-color:#0000ff;">
+            <tr ng-repeat="p in familyWish">
+                <td style="border-style: solid; border-width: 5px;border-color:#0000ff;"><div>  {{p.childname}}</div>
+                    <div>
+                        <div>
+                            <img ng-src="images/santa.jpg" style="width: 50px;height: 50px" />
+                        </div>
+                    </div>
+                </td>
+                <td>
+
+                    <table>
+                        <tr ng-repeat="y in p.wishlist">
+
+                            <td style="border-style: solid; border-width: 5px;border-color:#0000ff;">
+                            <div>  {{y}}</div>
+                                 <div>
+
+                                    <img ng-src="images/santa.jpg" style="width: 50px;height: 50px" />
+
+                                 </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <a ng-click="submitDonate()" class="btn btn-primary">Submit Donate</a>
+</div>

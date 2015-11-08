@@ -12,13 +12,16 @@ angular.module('register')
 
 
 angular.module('register')
-    .controller('RegisterFamilyController', ['$scope','$location',
+    .controller('RegisterFamilyController', ['$scope','$location', 'FamilyService',
 
-        function ($scope, $location) {
+        function ($scope, $location , FamilyService) {
             $scope.register = register;
 
             function register() {
-                $location.path('/register/conformation');
+                var familyId={FamilyId : 12};
+                FamilyService.setFamilyId(familyId);
+
+                $location.path('/donate/familydonation');
             }
             var init = function () {
             };
@@ -26,3 +29,7 @@ angular.module('register')
             init();
 
         }]);
+
+
+/*
+$location.path('/builder/workouts/' + workout.name);*/

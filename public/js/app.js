@@ -1,14 +1,17 @@
 'use strict';
 
-angular.module('app', ['ngRoute', 'ui.bootstrap','ngMessages', 'register', 'login', 'donate']).
+angular.module('app', ['ngRoute', 'ui.bootstrap','ngMessages', 'register', 'login', 'donate', 'todoController']).
 	config(function ($routeProvider ,  $sceDelegateProvider ) {
 
 
 		$routeProvider.when('/Home', { templateUrl: 'view/landing/home.html' });
+
+
 		$routeProvider.when('/Donate',
-			{ templateUrl: 'view/landing/donate.html',
-			controller: 'StoreController'
-		});
+			{
+				templateUrl: 'view/landing/donate.html',
+				controller: 'StoreController'
+			});
 
 		$routeProvider.when('/Admin', { templateUrl: 'view/landing/admin.html' });
 		$routeProvider.when('/Contact', { templateUrl: 'view/landing/contact.html' });
@@ -44,11 +47,13 @@ angular.module('app', ['ngRoute', 'ui.bootstrap','ngMessages', 'register', 'logi
 		});
 
 		$routeProvider.when('/donate/familydonation', {
-			templateUrl: 'view/donate/family-donation.html'
+			templateUrl: 'view/donate/family-wishlist.html',
+			controller: 'DonateController'
 		});
 
 		$routeProvider.when('/donate/conformation', {
-			templateUrl: 'view/donate/donate-conformation.html'
+			templateUrl: 'view/donate/donate-conformation.html',
+			controller: 'SubmitDonateController'
 		});
 
 		$routeProvider.otherwise({ redirectTo: '/Home' });
@@ -64,3 +69,4 @@ angular.module('app', ['ngRoute', 'ui.bootstrap','ngMessages', 'register', 'logi
 angular.module('register', []);
 angular.module('login', []);
 angular.module('donate', []);
+angular.module('todoController', []);
