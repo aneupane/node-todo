@@ -18,12 +18,12 @@
             <!--  Product Container  -->
             <div class="list-group-item" ng-style="myStyle"
                  ng-repeat="product in products" ng-click="doDecorate(product)">
-                <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+                <h3>{{product.name}} <em class="pull-right">{{product.price}}</em></h3>
 
                 <!-- Image Gallery  -->
                 <div class="gallery">
                     <div class="img-wrap">
-                        <img ng-src="{{product.images[0]}}" />
+                        <img ng-src="{{product.images[0]}}"  style="width: 100px;height: 100px"/>
                     </div>
                 </div>
             </div>
