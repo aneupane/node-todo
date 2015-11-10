@@ -1,6 +1,6 @@
 ﻿
 angular.module('donate')
-    .controller('SubmitDonateController',  ['$scope', '$location','FamilyService', 'UserAuthorizationService',
+    .controller('RegisterFamilyConformationController',  ['$scope', '$location','FamilyService','UserAuthorizationService',
 
         function ($scope , $location , FamilyService , UserAuthorizationService) {
 
@@ -9,12 +9,6 @@ angular.module('donate')
                 var userRole = UserAuthorizationService.getRole();
                 return userRole;
             }
-
-
-
-            $scope.submitDonate = function(){
-                $scope.path('/donate/conformation');
-            };
 
 
             var init = function () {

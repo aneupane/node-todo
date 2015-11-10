@@ -1,69 +1,94 @@
 'use strict';
 
-angular.module('app', ['ngRoute', 'ui.bootstrap','ngMessages', 'register', 'login', 'donate', 'todoController']).
-	config(function ($routeProvider ,  $sceDelegateProvider ) {
+angular.module('app', ['ngRoute', 'ui.bootstrap', 'ngMessages', 'register', 'login', 'donate', 'todoController']).
+config(function ($routeProvider, $sceDelegateProvider) {
 
 
-		$routeProvider.when('/Home', { templateUrl: 'view/landing/home.html' });
+    $routeProvider.when('/Home',
+        {
+            templateUrl: 'view/landing/home.html',
+            topNav: 'view/header/header.html',
+            controller: 'HomeController'
+        });
 
 
-		$routeProvider.when('/Donate',
-			{
-				templateUrl: 'view/landing/donate.html',
-				controller: 'StoreController'
-			});
+    $routeProvider.when('/Donate',
+        {
+            topNav: 'view/header/header.html',
+            templateUrl: 'view/landing/donate.html',
+            controller: 'StoreController'
+        });
 
-		$routeProvider.when('/Admin', { templateUrl: 'view/landing/admin.html' });
-		$routeProvider.when('/Contact', { templateUrl: 'view/landing/contact.html' });
-		$routeProvider.when('/AboutUs', { templateUrl: 'view/landing/aboutus.html' });
-		$routeProvider.when('/Register', { templateUrl: 'view/landing/register.html' });
+    $routeProvider.when('/Admin', {
+        templateUrl: 'view/landing/admin.html',
+        topNav: 'view/header/header.html',
+        controller: 'AdminController'
+    });
+
+    $routeProvider.when('/Contact', {
+        templateUrl: 'view/landing/contact.html',
+        topNav: 'view/header/header.html'
+    });
+    $routeProvider.when('/AboutUs', {
+        templateUrl: 'view/landing/aboutus.html',
+        topNav: 'view/header/header.html',
+    });
+    $routeProvider.when('/Register', {
+        templateUrl: 'view/landing/register.html',
+        topNav: 'view/header/header.html',
+    });
 
 
+    $routeProvider.when('/register/family', {
+        topNav: 'view/header/header.html',
+        templateUrl: 'view/register/family.html',
+        controller: 'RegisterFamilyController'
+    });
+
+    $routeProvider.when('/register/conformation', {
+        templateUrl: 'view/register/conformation.html'
+    });
 
 
+    $routeProvider.when('/register/donar', {
+        topNav: 'view/header/header.html',
+        templateUrl: 'view/register/donar.html',
+        controller: 'RegisterDonarController',
+        controllerAs: 'vm'
+    });
 
-		$routeProvider.when('/register/family', {
-			templateUrl: 'view/register/family.html',
-			controller: 'RegisterFamilyController'
-		});
+    $routeProvider.when('/register/donar/conformation', {
+        topNav: 'view/header/header.html',
+        templateUrl: 'view/register/conformation.html',
+        controller: 'RegisterDonarConformationController'
+    });
 
-		$routeProvider.when('/register/conformation', {
-			templateUrl: 'view/register/conformation.html'
-		});
+    $routeProvider.when('/register/family/conformation', {
+        topNav: 'view/header/header.html',
+        templateUrl: 'view/register/family-conform.html',
+        controller: 'RegisterFamilyConformationController'
+    });
 
+    $routeProvider.when('/donate/familydonation', {
+        topNav: 'view/header/header.html',
+        templateUrl: 'view/donate/family-wishlist.html',
+        controller: 'DonateController'
+    });
 
-		$routeProvider.when('/register/donar', {
-			templateUrl: 'view/register/donar.html',
-			controller: 'RegisterDonarController',
-			controllerAs: 'vm'
-		});
+    $routeProvider.when('/donate/conformation', {
+        topNav: 'view/header/header.html',
+        templateUrl: 'view/donate/donate-conformation.html',
+        controller: 'SubmitDonateController'
+    });
 
-		$routeProvider.when('/register/donar/conformation', {
-			templateUrl: 'view/register/conformation.html'
-		});
+    $routeProvider.otherwise({redirectTo: '/Home'});
 
-		$routeProvider.when('/register/family/conformation', {
-			templateUrl: 'view/register/family-conform.html'
-		});
-
-		$routeProvider.when('/donate/familydonation', {
-			templateUrl: 'view/donate/family-wishlist.html',
-			controller: 'DonateController'
-		});
-
-		$routeProvider.when('/donate/conformation', {
-			templateUrl: 'view/donate/donate-conformation.html',
-			controller: 'SubmitDonateController'
-		});
-
-		$routeProvider.otherwise({ redirectTo: '/Home' });
-
-		$sceDelegateProvider.resourceUrlWhitelist([
-			// Allow same origin resource loads.
-			'self',
-			// Allow loading from our assets domain.  Notice the difference between * and **.
-			'http://!*.youtube.com/!**']);
-	});
+    $sceDelegateProvider.resourceUrlWhitelist([
+        // Allow same origin resource loads.
+        'self',
+        // Allow loading from our assets domain.  Notice the difference between * and **.
+        'http://!*.youtube.com/!**']);
+});
 
 
 angular.module('register', []);

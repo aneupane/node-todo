@@ -1,15 +1,79 @@
-<!DOCTYPE html>
-<html>
+<div style="padding-top: 170px">
 
-<head>
-<title>Admin</title>
-</head>
-<body>
-	<div  class="middle" style="background-color:#E5E4E2">Admin
-
-
-		<img src="images/admin.png"  width="600" height="347" />
+	<div id='cssmenu' style="position: absolute;z-index: 100">
+		<ul>
+			<li><a href='#Home'><span>Home</span></a></li>
+			<li ng-show="getUserRole() == 'normal' || getUserRole() == 'donar' " >
+				<a href='#Donate'><span>Donate</span></a></li>
+			<li ng-show= "getUserRole() == 'normal'">
+				<a href='#Register'><span>Register</span></a></li>
+			<li><a href='#Faq'><span>FAQ</span></a></li>
+			<li><a href='#AboutUs'><span>About US</span></a></li>
+			<li ng-show="getUserRole() == 'admin' "><a href='#Admin'><span>Admin</span></a></li>
+			<li><a href='#Contact'><span>Contact</span></a></li>
+		</ul>
 	</div>
-</body>
-</html>
+
+	<div style="height: 1000px;padding-top: 100px ; padding-left: 100px">
+
+		<table style="border-style: solid; border-width: 5px;border-color:#0000ff;">
+			<tr>
+				<td class ="admintable">
+					 Family Name
+				</td>
+
+				<td class ="admintable">
+					Child Name
+				</td>
+
+				<td class ="admintable" > WishList
+
+				</td>
+
+				<td class ="admintable"> Biography
+
+				</td>
+
+				<td class ="admintable">Status
+
+				</td>
+				<td class ="admintable">Admin Action
+
+				</td>
+			</tr>
+
+			<tr>
+				<td class ="admintable">
+					{{familyname}}
+				</td>
+
+				<td class ="admintable">
+					{{children}}
+				</td>
+
+				<td class ="admintable"> {{wishlist}}
+
+				</td>
+
+				<td class ="admintable"> {{biography}}
+
+				</td>
+
+				<td class ="admintable">
+					{{status}}
+
+				</td>
+				<td class ="admintable">
+					<a ng-click="approveWishList()" class="btn btn-primary">Approve</a>
+					<a ng-click="declineWishList()" class="btn btn-primary">Disapprove</a>
+
+				</td>
+			</tr>
+
+		</table>
+
+
+
+	</div>
+</div>
 

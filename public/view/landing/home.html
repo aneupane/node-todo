@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html>
+<div style="padding-top: 170px" ng-controller="HomeController">
 
-<head>
- <link rel="stylesheet" href="app-content/app.css">
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1">
- </script><script type="text/javascript" src="js/infinite-rotator.js"></script>
- 
-<title>Home</title>
-</head>
-<body>
-	<div  class="middle" style="background-color:#D8D8D8">
-	
+    <div id='cssmenu' style="position: absolute;z-index: 100">
+        <ul>
+            <li><a href='#Home'><span>Home</span></a></li>
+            <li ng-show="getUserRole() == 'normal' || getUserRole() == 'donar' " >
+                <a href='#Donate'><span>Donate</span></a></li>
+            <li ng-show= "getUserRole() == 'normal'">
+                <a href='#Register'><span>Register</span></a></li>
+            <li><a href='#Faq'><span>FAQ</span></a></li>
+            <li><a href='#AboutUs'><span>About US</span></a></li>
+            <li ng-show="getUserRole() == 'admin' "><a href='#Admin'><span>Admin</span></a></li>
+            <li><a href='#Contact'><span>Contact</span></a></li>
+        </ul>
+    </div>
 
+    <div style="height: 1000px">
 
-	<div id="rotating-item-wrapper">
-	 <img class="rotating-item" src="/images/ipad.jpg"  width="600" height="347" />
-	 <img class="rotating-item" src="/images/santa.jpg"  width="600" height="347" />
-	 <img class="rotating-item" src="/images/teddy.jpg" width="600" height="347" />
-	</div>
-
-	
-	
-	
-	</div>
-</body>
-</html>
+    </div>
+</div>
 

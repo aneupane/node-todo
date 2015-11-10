@@ -1,4 +1,19 @@
-<div class="middle">
+<div style="padding-top: 170px">
+
+    <div id='cssmenu' style="position: absolute;z-index: 100">
+        <ul>
+            <li><a href='#Home'><span>Home</span></a></li>
+            <li ng-show="getUserRole() == 'normal' || getUserRole() == 'donar' " >
+                <a href='#Donate'><span>Donate</span></a></li>
+            <li ng-show= "getUserRole() == 'normal'">
+                <a href='#Register'><span>Register</span></a></li>
+            <li><a href='#Faq'><span>FAQ</span></a></li>
+            <li><a href='#AboutUs'><span>About US</span></a></li>
+            <li ng-show="getUserRole() == 'admin' "><a href='#Admin'><span>Admin</span></a></li>
+            <li><a href='#Contact'><span>Contact</span></a></li>
+        </ul>
+    </div>
+
     <div  style="padding-left: 250px;padding-top: 80px">
         <table style="width: 80%">
             <tr>
@@ -36,7 +51,7 @@
                         </div>
 
                         <div>
-                            <label for="username" > UserName</label> <br/>
+                            <label for="username"> UserName</label> <br/>
                             <input id="username" ng-model="myForm.username" />
                         </div>
 
@@ -121,7 +136,55 @@
     </div>
 
     <div style="padding-left: 550px;padding-top: 20px">
-        <a href="#/register/donar/conformation"
+        <a href="#/register/family/conformation"
            class="btn btn-primary">Submit</a>
     </div>
+
+    <div style="padding-left: 400px;padding-top: 100px">
+
+         Inventory
+    </div>
+
+
+    <div style="height: 400px;padding-top: 50px ; padding-left: 400px">
+
+        <table style="border-style: solid; border-width: 5px;border-color:#0000ff;">
+            <tr>
+                <td class ="admintable">
+                   Item Image
+                </td>
+
+                <td class ="admintable">
+                   Item Name
+                </td>
+
+                <td class ="admintable" > Inventory
+
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td class ="admintable">
+
+                </td>
+
+                <td class ="admintable">
+                   car
+                </td>
+
+                <td class ="admintable"> 20
+
+                </td>
+
+
+            </tr>
+
+        </table>
+
+
+
+    </div>
+
 </div>

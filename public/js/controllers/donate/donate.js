@@ -1,8 +1,15 @@
 ﻿
 angular.module('donate')
-    .controller('StoreController',  ['$scope', '$location','FamilyService',
+    .controller('StoreController',  ['$scope', '$location','FamilyService','UserAuthorizationService',
 
-        function ($scope , $location , FamilyService) {
+        function ($scope , $location , FamilyService , UserAuthorizationService) {
+
+
+            $scope.getUserRole= function () {
+                var userRole = UserAuthorizationService.getRole();
+                return userRole;
+            }
+
 
             $scope.doDecorate= function (product) {
 

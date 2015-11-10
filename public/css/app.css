@@ -12,13 +12,15 @@
     line-height: 1;
     color: red;
 }
+
 #cssmenu {
     width: 970px;
     padding-left: 140px;
 }
+
 #cssmenu ul {
     zoom: 1;
-    background: #a7bc7a url(/images/pattern.png) top left repeat;
+    background: #a7bc7a url(/public/images/pattern.png) top left repeat;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -27,15 +29,18 @@
     -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 }
+
 #cssmenu ul:before {
     content: '';
     display: block;
 }
+
 #cssmenu ul:after {
     content: '';
     display: table;
     clear: both;
 }
+
 #cssmenu a,
 #cssmenu a:link,
 #cssmenu a:visited {
@@ -46,17 +51,21 @@
     text-shadow: 0 -1px 1px #586835;
     border-right: 1px solid #839b4e;
 }
+
 #cssmenu a:hover {
     color: #586835;
     text-shadow: 0 1px 1px #bdcd9c;
 }
+
 #cssmenu li {
     float: left;
     border-right: 1px solid #b2c58b;
 }
+
 #cssmenu li:hover {
-    background: #9cb369 url(/images/pattern.png) top left repeat;
+    background: #9cb369 url(/public/images/pattern.png) top left repeat;
 }
+
 #cssmenu li:first-child {
     border-left: none;
     -webkit-border-radius: 4px 0 0 4px;
@@ -65,22 +74,30 @@
 }
 
 #top {
-    width:100%;
+    width: 100%;
     height: 120px;
     background-color: #00FFFF;
 }
+
 .middle {
-    width:100%;
-    height:400px;
-    overflow:auto;
+    width: 100%;
+    height: 800px;
+    overflow: auto;
 }
+
 .footer {
-    width:100%;
+    width: 100%;
     height: 100px;
     background-color: #99FFFF;
 }
 
-.title{
+.admintable {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #0000ff;
+}
+
+.title {
     /* margin: 1em 0 0.5em 0; */
     font-weight: 100;
     text-transform: uppercase;
@@ -89,47 +106,43 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 70px;
     line-height: 54px;
-    text-shadow: 6px 10px 0 rgba(0,0,0,0.2);
+    text-shadow: 6px 10px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding-top : 30px;
+    padding-top: 30px;
 }
 
-#rotating-item-wrapper{
+#rotating-item-wrapper {
     position: relative;
     width: 980px;
     height: 347px;
 }
-
 
 .rotating-item {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-    align:middle;
+    align: middle;
 }
 
-#login{
+#login {
     position: absolute;
     left: 1100px;
     top: 130px;
     z-index: 2;
 }
 
-#infocontainer{
+#infocontainer {
 
-    float:left;
-    width:100px;
+    float: left;
+    width: 100px;
 }
 
-#piccontainer{
+#piccontainer {
 
-    float:right;
-    width:100px;
+    float: right;
+    width: 100px;
 }
-
-
-
 
 .btn-custom {
     background-color: hsl(204, 100%, 50%) !important;
@@ -149,9 +162,8 @@
     height: 800px;
 }
 
-
-.cb:hover{
+.cb:hover {
     border-style: solid;
     border-width: 2px 10px 4px 20px;
-    border-color:#4a4a4a;
+    border-color: #4a4a4a;
 }

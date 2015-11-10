@@ -12,24 +12,22 @@
 
 <body style="background-color:#00FFFF" ng-controller="RootController">
 
-<div id="login">
-	<div>
-		<a ng-click="loginShow()" title="Workout History">Log In</a></li>
+
+<div class="navbar navbar-default navbar-fixed-top top-navbar">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a ng-click="loginShow()" title="Log In ">Log In</a></li>
+		</ul>
+	</div>
+	<div id="top-nav-container" class="second-top-nav">
+		<div id="top-nav" ng-include="currentRoute.topNav">
+		</div>
 	</div>
 </div>
-<div id="top"   class= "title">Happy Holiday Donors</div>
-<div id='cssmenu' >
-	<ul>
-		<li><a href='#Home'><span>Home</span></a></li>
-		<li><a href='#Donate'><span>Donate</span></a></li>
-		<li><a href='#Register'><span>Register</span></a></li>
-		<li><a href='#Faq'><span>FAQ</span></a></li>
-		<li><a href='#AboutUs'><span>About US</span></a></li>
-		<li><a href='#Admin'><span>Admin</span></a></li>
-		<li><a href='#Contact'><span>Contact</span></a></li>
-	</ul>
-</div>
-<div ng-view ></div>
+
+<div id="page-content" ng-view></div>
+
+
 <div class="footer">Footer</div>
 
 <!--<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>-->
@@ -43,12 +41,26 @@
 <script src="js/app.js"></script>
 <script src="js/root.js"></script>
 <script src="js/core.js"></script>
-<script src="js/controllers/register/register.js"></script>
+
+
+<script src="js/services/family.js"></script>
+<script src="js/services/authorization.user.js"></script>
+
+<script src="js/controllers/admin/admin.js"></script>
+
 <script src="js/controllers/donate/donate.js"></script>
 <script src="js/controllers/donate/landing.donate.js"></script>
 <script src="js/controllers/donate/submit.donate.js"></script>
-<script src="js/controllers/register/register.controller.js"></script>
-<script src="js/services/family.js"></script>
+
+<script src="js/controllers/home/home.js"></script>
+<script src="js/controllers/login/login.js"></script>
+
+
+<script src="js/controllers/register/registerdonarconform.js"></script>
+<script src="js/controllers/register/registerfamilyconform.js"></script>
+
+
+
 
 </body>
 </html>

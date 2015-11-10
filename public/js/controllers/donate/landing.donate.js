@@ -1,8 +1,14 @@
 ﻿
 angular.module('donate')
-    .controller('DonateController', ['$scope', '$location', 'FamilyService',
+    .controller('DonateController', ['$scope', '$location', 'FamilyService', 'UserAuthorizationService',
 
-        function ($scope ,$location, FamilyService ) {
+        function ($scope ,$location, FamilyService ,UserAuthorizationService ) {
+
+
+            $scope.getUserRole= function () {
+                var userRole = UserAuthorizationService.getRole();
+                return userRole;
+            }
 
             var familydonation ={};
 
