@@ -53,8 +53,7 @@ config(function ($routeProvider, $sceDelegateProvider) {
     $routeProvider.when('/register/donar', {
         topNav: 'view/header/header.html',
         templateUrl: 'view/register/donar.html',
-        controller: 'RegisterDonarController',
-        controllerAs: 'vm'
+        controller: 'RegisterDonarController'
     });
 
     $routeProvider.when('/register/donar/conformation', {

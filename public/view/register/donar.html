@@ -47,12 +47,12 @@
 
             <div>
               <label for="email">Email Address </label> <br/>
-              <input id="email" ng-model="myForm.email />
+              <input id="email" ng-model="myForm.email" />
             </div>
 
             <div>
-              <label for="familyusername"> UserName</label> <br/>
-              <input id="familyusername" ng-model="myForm.username" />
+              <label for="username" >UserName </label> <br/>
+              <input id="username" ng-model="myForm.username" />
             </div>
 
             <div>
@@ -63,7 +63,10 @@
 
           <div id="profilepic" style="padding-left: 350px;">
             Upload Picture <br/>
-            <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+            <!--<input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>-->
+
+            <input type="file" id="file" file-model="myForm.donar" />
+            <img ng-src="images/{{myForm.donar.name}}" width="300" /><br />
           </div>
         </td>
       </tr>
@@ -71,7 +74,8 @@
   </div>
 
   <div style="padding-left: 550px;padding-top: 20px">
-    <a href="#/register/donar/conformation" class="btn btn-primary">Submit</a>
+   <!-- href="#/register/donar/conformation"-->
+    <a ng-click="submitDonar()" class="btn btn-primary">Submit</a>
   </div>
 </div>
 
