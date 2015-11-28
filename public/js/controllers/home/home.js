@@ -4,6 +4,7 @@
         function ($scope,$modal, $location, FamilyService, UserAuthorizationService) {
 
             var logintext= $scope.logintext;
+
             if(logintext !== 'Log Out'){
                 $scope.logintext = 'Log In';
             }
@@ -11,6 +12,16 @@
             $scope.getUserRole= function () {
                 var userRole = UserAuthorizationService.getRole();
                 return userRole;
+            };
+
+            $scope.getWelcomeText = function(){
+                var user = UserAuthorizationService.getUserName();
+
+                if( user !== '' && user !== 'normal'){
+                    $scope.welcometext = 'welcome ' + user +'!!!';
+                    return true;
+                }
+                return false;
             };
 
             $scope.loginShow = function () {
@@ -28,7 +39,6 @@
                         templateUrl: 'view/login/login.view.html',
                         controller: 'LoginController'
                     });
-
                 }
             };
 

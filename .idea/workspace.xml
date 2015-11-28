@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35021d6b-5bf4-4f3f-900f-984711a35ebe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/berry.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/headphone.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/iphone.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/jerry.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ps4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sherry.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/xbox.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/controllers/register/registerfamily.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/donate/donate.js" afterPath="$PROJECT_DIR$/public/js/controllers/donate/donate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js" afterPath="$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/donate/submit.donate.js" afterPath="$PROJECT_DIR$/public/js/controllers/donate/submit.donate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/home/home.js" afterPath="$PROJECT_DIR$/public/js/controllers/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/login/login.js" afterPath="$PROJECT_DIR$/public/js/controllers/login/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/register/registerdonar.js" afterPath="$PROJECT_DIR$/public/js/controllers/register/registerdonar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services/authorization.user.js" afterPath="$PROJECT_DIR$/public/js/services/authorization.user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/donate/family-wishlist.html" afterPath="$PROJECT_DIR$/public/view/donate/family-wishlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/header/header.html" afterPath="$PROJECT_DIR$/public/view/header/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/donate.html" afterPath="$PROJECT_DIR$/public/view/landing/donate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/home.html" afterPath="$PROJECT_DIR$/public/view/landing/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/register.html" afterPath="$PROJECT_DIR$/public/view/landing/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/register/donar.html" afterPath="$PROJECT_DIR$/public/view/register/donar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/register/family.html" afterPath="$PROJECT_DIR$/public/view/register/family.html" />
     </list>
     <ignored path="node-todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/controllers/home/home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-9.444445">
-              <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -61,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/root.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -70,12 +49,13 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/view/landing/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10489511">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.06315789">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,8 +64,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.125">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -152,10 +132,10 @@
         <option value="$PROJECT_DIR$/public/js/services/authorization.user.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/login/login.js" />
         <option value="$PROJECT_DIR$/public/js/root.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/view/header/header.html" />
-        <option value="$PROJECT_DIR$/public/view/landing/home.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/home/home.js" />
+        <option value="$PROJECT_DIR$/public/view/landing/home.html" />
       </list>
     </option>
   </component>
@@ -632,7 +612,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448632856712</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="login log out">
+      <created>1448712382035</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1448712382035</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -643,7 +629,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26899695" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19908814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -675,7 +661,8 @@
     <MESSAGE value="code clean up" />
     <MESSAGE value="initail layout" />
     <MESSAGE value="added picture and name" />
-    <option name="LAST_COMMIT_MESSAGE" value="added picture and name" />
+    <MESSAGE value="login log out" />
+    <option name="LAST_COMMIT_MESSAGE" value="login log out" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1046,14 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/view/header/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
@@ -1062,10 +1041,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/root.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1073,19 +1060,20 @@
     <entry file="file://$PROJECT_DIR$/public/js/controllers/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.444445">
-          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/view/landing/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10489511">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.06315789">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
