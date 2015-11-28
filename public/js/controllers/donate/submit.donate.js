@@ -12,9 +12,6 @@ angular.module('donate')
 
 
 
-            $scope.submitDonate = function(){
-                $scope.path('/donate/conformation');
-            };
 
 
             var init = function () {

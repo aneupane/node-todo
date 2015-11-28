@@ -47,7 +47,7 @@
 
                         <div>
                             <label for="email">Email Address </label> <br/>
-                            <input id="email" ng-model="myForm.email />
+                            <input id="email" ng-model="myForm.email"/>
                         </div>
 
                         <div>
@@ -100,23 +100,43 @@
                             </tr>
                             <tr>
                                 <td>
-                                    Name <input id="childname" ng-model="child.name" /><br/>
+                                   <!-- Name <input id="childname" ng-model="child.name" /><br/>
                                     <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+-->
+                                    <div>
+                                        <label for="childname">Child Name</label><br/>
+                                        <input id="childname" ng-model="myForm.childname" />
+                                        <input type="file" id="file" file-model="myForm.family.child" />
+                                        <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                    </div>
 
                                 </td>
                                 <td>
 
-                                    wishlist 1  <input id="wishlist1" ng-model=child.wishlist1 />
-                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-                                    <br/>
 
-                                    wishlist 2  <input id="wishlist2" ng-model="child.wishlist2" />
-                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-                                    <br/>
+                                    <div>
+                                        <label for="wishlist1">First WishList</label><br/>
+                                        <input id="wishlist1" ng-model="myForm.wishlist1" />
+                                        <input type="file" id="wishlist1file" file-model="myForm.family.wishlist1" />
+                                        <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                    </div>
 
-                                    wishlist 3 <input id="wishlist3" ng-model="child.wishlist3" />
-                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-                                    <br/>
+
+                                    <div>
+                                        <label for="wishlist2">Second WishList</label><br/>
+                                        <input id="wishlist2" ng-model="myForm.wishlist2" />
+                                        <input type="file" id="wishlist2file" file-model="myForm.family.wishlist2" />
+                                        <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                    </div>
+
+
+                                    <div>
+                                        <label for="wishlist3">Third WishList</label><br/>
+                                        <input id="wishlist3" ng-model="myForm.wishlist3" />
+                                        <input type="file" id="wishlist3file" file-model="myForm.family.wishlist3" />
+                                        <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                    </div>
 
                                 </td>
                             </tr>

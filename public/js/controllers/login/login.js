@@ -28,6 +28,7 @@ angular.module('app')
 
 
                     UserAuthorizationService.setRole("admin");
+                    UserAuthorizationService.setUserName('admin');
                     alert('success');
                     $modalInstance.close();
                     return true;
@@ -39,6 +40,7 @@ angular.module('app')
 
 
                     UserAuthorizationService.setRole("donar");
+                    UserAuthorizationService.setUserName("donar");
                     alert('success');
                     $modalInstance.close();
                     return true;
@@ -50,6 +52,7 @@ angular.module('app')
 
 
                     UserAuthorizationService.setRole("normal");
+                    UserAuthorizationService.setUserName("normal");
                     alert('success');
                     $modalInstance.close();
                     return true;
@@ -60,7 +63,10 @@ angular.module('app')
 
 
                     UserAuthorizationService.setRole("family");
+                    UserAuthorizationService.setUserName("family");
+
                     alert('success');
+
                     $modalInstance.close();
                     return true;
                 }
@@ -73,11 +79,12 @@ angular.module('app')
                     , passWord: $scope.form.password
                 });
 
-                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/userauth", data)
+               /* $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/userauth", data)
                     .success(function (data, status) {
                         alert('successfully logged in ');
                         $modalInstance.close();
-                    })
+                    })*/
+
             }
 
 

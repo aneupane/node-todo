@@ -19,40 +19,53 @@
 
     <div style="width: 70%;height: 90%;padding-left: 30% ; padding-top: 10px">
 
-        <table style="width: 100%;height: 100%;padding-left: 10%;
-        border-style: solid; border-width: 5px;border-color:#0000ff;">
+        <table border="1">
             <tr ng-repeat="p in familyWish">
-                <td style="border-style: solid; border-width: 5px;border-color:#0000ff;"><div>  {{p.childname}}</div>
+                <td ><div>  {{p.childname}}</div>
                     <div>
                         <div>
-                            <img ng-src="images/santa.jpg" style="width: 50px;height: 50px" />
+                            <img ng-src="images/{{p.childname}}.jpg" style="width: 50px;height: 50px" />
                         </div>
                     </div>
                 </td>
-                <td>
-
+                <td style="padding-left: 70px">
                     <table>
                         <tr ng-repeat="y in p.wishlist">
 
-                            <td style="border-style: solid; border-width: 5px;border-color:#0000ff;">
+                            <td>
                             <div>  {{y}}</div>
                                  <div>
-
-                                    <img ng-src="images/santa.jpg" style="width: 50px;height: 50px" />
-
+                                    <img ng-src="images/{{y}}.jpg" style="width: 50px;height: 50px" />
                                  </div>
                             </td>
                         </tr>
                     </table>
+                </td>
+                <td>
 
+                    <div>
+
+                        <select id="myselection"
+                                multiple="true"
+                                ng-model="selectedGift"
+                                ng-change="getGiftUpdate(selectedGift)"
+                                ng-options="o as o for o in p.wishlist" >
+
+                        </select>
+
+                    </div>
+                    <div>
+                        Selected Colors: {{selectedGift}}
+                    </div>
 
                 </td>
             </tr>
         </table>
 
+
     </div>
 
-    <div style="padding-left: 470px;padding-top: 350px;">
+    <div style="padding-left: 470px">
         <a ng-click="submitDonate()" class="btn btn-primary">Submit Donate</a>
     </div>
 

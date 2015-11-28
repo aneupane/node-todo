@@ -6,7 +6,7 @@
 
 angular.module('app')
     .factory('UserAuthorizationService', function () {
-        var role = {role: 'normal'};
+        var role = {role: 'normal' , username : '' };
 
         return {
             getRole: function () {
@@ -14,6 +14,13 @@ angular.module('app')
             },
             setRole: function (id) {
                 role.role = id;
+            },
+            getUserName: function () {
+                return role.username;
+            },
+            setUserName: function (id) {
+                role.username = id;
             }
+
         };
     });

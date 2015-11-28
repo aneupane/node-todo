@@ -22,6 +22,14 @@ angular.module('donate')
                 $location.path('/donate/conformation');
             };
 
+
+            $scope.getGiftUpdate = function(selectedGift) {
+                $scope.giftList = $scope.selectedGift;
+                // use $scope.selectedItem.code and $scope.selectedItem.name here
+                // for other stuff ...
+            }
+
+
             //var id ="123";  //FamilyService.getFamilyId();
 
             var id =FamilyService.getFamilyId();
@@ -33,88 +41,31 @@ angular.module('donate')
                         {
                             "childname": "jerry",
                             "wishlist": [
-                                "car0",
-                                "photo0",
-                                "ipad0"
+                                "ipad",
+                                "headphone",
+                                "iphone"
                             ]
                         },
                         {
                             "childname": "berry",
                             "wishlist": [
-                                "car",
-                                "photo2",
-                                "ipad2"
+                                "ps4",
+                                "xbox",
+                                "ipad"
                             ]
                         },
                         {
-                            "childname": "cerry",
+                            "childname": "sherry",
                             "wishlist": [
-                                "car",
-                                "photo1",
-                                "ipad1"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "familyid": "887",
-                    "payload": [
-                        {
-                            "childname": "jerry",
-                            "wishlist": [
-                                "bcar0",
-                                "bphoto0",
-                                "bipad0"
-                            ]
-                        },
-                        {
-                            "childname": "berry",
-                            "wishlist": [
-                                "bcar",
-                                "bphoto2",
-                                "bipad2"
-                            ]
-                        },
-                        {
-                            "childname": "cerry",
-                            "wishlist": [
-                                "bcar",
-                                "bphoto1",
-                                "bipad1"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "familyid": "324",
-                    "payload": [
-                        {
-                            "childname": "jerry",
-                            "wishlist": [
-                                "acar0",
-                                "aphoto0",
-                                "aipad0"
-                            ]
-                        },
-                        {
-                            "childname": "berry",
-                            "wishlist": [
-                                "acar",
-                                "aphoto2",
-                                "aipad2"
-                            ]
-                        },
-                        {
-                            "childname": "cerry",
-                            "wishlist": [
-                                "acar",
-                                "aphoto1",
-                                "iapad1"
+                                "ps4",
+                                "xbox",
+                                "iphone"
                             ]
                         }
                     ]
                 }
             ];
+
 
 
             var family = function (id) {

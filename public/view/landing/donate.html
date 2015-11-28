@@ -14,12 +14,23 @@
     </div>
 
     <div style="padding-top: 50px">
+
+        <div style="padding-left: 470px">
+            <label for="family" >Select Family </label> <br/>
+            <select id="family" ng-options="item as item.name for item in products track by item.id" ng-model="selected"></select>
+        </div>
+
+        <div style="padding-left: 470px">
+            <label >All Family</label> <br/>
+        </div>
+
         <div class="list-group middle"  style="height: 90%;width:60%;padding-left: 350px;">
             <!--  Product Container  -->
-            <div class="list-group-item" ng-style="myStyle"
-                 ng-repeat="product in products" ng-click="doDecorate(product)">
-                <h3>{{product.name}} <em class="pull-right">{{product.price}}</em></h3>
+            <div class="list-group-item"
+                 ng-repeat="product in products" ng-click="doDecorate(product)" ng-style="myStyle">
 
+                <!-- ng-style="myStyle_{{product.price}-->
+                <h3>{{product.name}} <em class="pull-right">{{product.price}}</em></h3>
                 <!-- Image Gallery  -->
                 <div class="gallery">
                     <div class="img-wrap">
@@ -30,10 +41,13 @@
 
         </div>
     </div>
+
+</div>
+<div>
 </div>
 <div style="padding-left: 450px;padding-top: 20px;">
 <!--    <a href="#/donate/familydonation" class="btn btn-primary">Select Family </a>-->
-    <a ng-click="getFamily()" class="btn btn-primary">Select Family </a>
+    <a ng-click="getFamily()" class="btn btn-primary">Submit</a>
 </div>
 
 
