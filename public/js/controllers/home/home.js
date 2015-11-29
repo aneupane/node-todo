@@ -1,12 +1,14 @@
 ﻿angular.module('app')
-    .controller('HomeController', ['$scope','$modal', '$location', 'FamilyService', 'UserAuthorizationService',
+    .controller('HomeController', ['$scope','$modal', '$location', 'FamilyService',
+        'UserAuthorizationService','LoginStatusService',
 
-        function ($scope,$modal, $location, FamilyService, UserAuthorizationService) {
+        function ($scope,$modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
 
             var logintext= $scope.logintext;
 
             if(logintext !== 'Log Out'){
                 $scope.logintext = 'Log In';
+                LoginStatusService.setLoginText(logintext);
             }
 
             $scope.getUserRole= function () {
@@ -28,6 +30,7 @@
 
                 if($scope.logintext === 'Log Out'){
                     $scope.logintext = 'Log In';
+                    LoginStatusService.setLoginText('Log In');
                     $scope.welcometext ='';
                     UserAuthorizationService.setRole('normal');
                     UserAuthorizationService.setUserName('normal');
@@ -35,6 +38,7 @@
                     return true;
                 } else{
                     $scope.logintext = 'Log Out';
+                    LoginStatusService.setLoginText('Log Out');
                     var dailog = $modal.open({
                         templateUrl: 'view/login/login.view.html',
                         controller: 'LoginController'

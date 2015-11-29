@@ -1,4 +1,13 @@
-<div style="padding-top: 170px">
+<div style="padding-top: 100px">
+
+    <div style="padding-left: 1130px;z-index: 1000">
+        <a ng-click="loginShow()">{{logintext}}</a>
+    </div>
+
+    <div style="padding-left: 0px;z-index: 1000 ;position: absolute ;padding-top: -100px">
+        <a ng-show="getWelcomeText()" >{{welcometext}}</a>
+    </div>
+
 
     <div id='cssmenu' style="position: absolute;z-index: 100">
         <ul>
@@ -89,71 +98,515 @@
                     <div id="wishlist" style="float: right">
 
 
-                        <table>
-                            <tr>
-                                <td>Child
+                        <table style="padding-top: 300px">
 
-                                </td>
+                            <tr>
                                 <td>
-                                    wishList
+                                    <div>
+                                        <div  ng-show="getdisplayIndex() == '0'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_0">Child Name</label><br/>
+                                                            <input id="childname_0" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_0" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_0">First WishList</label><br/>
+                                                            <input id="wishlist1_0" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_0" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1_0.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_0">Second WishList</label><br/>
+                                                            <input id="wishlist2_0" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_0" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2_0.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_0">Third WishList</label><br/>
+                                                            <input id="wishlist3_0" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_0" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '1'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex+1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_1">Child Name</label><br/>
+                                                            <input id="childname_1" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_1" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_1">First WishList</label><br/>
+                                                            <input id="wishlist1_1" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_1" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_1">Second WishList</label><br/>
+                                                            <input id="wishlist2_1" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_1" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_1">Third WishList</label><br/>
+                                                            <input id="wishlist3_1" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_1" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '2'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child  {{displayIndex+1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_2">Child Name</label><br/>
+                                                            <input id="childname_2" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_2" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_2">First WishList</label><br/>
+                                                            <input id="wishlist1_2" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_2" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_2">Second WishList</label><br/>
+                                                            <input id="wishlist2_2" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_2" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_2">Third WishList</label><br/>
+                                                            <input id="wishlist3_2" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_2" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '3'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child  {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_3">Child Name</label><br/>
+                                                            <input id="childname_3" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_3" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_3">First WishList</label><br/>
+                                                            <input id="wishlist1_3" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_3" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_3">Second WishList</label><br/>
+                                                            <input id="wishlist2_3" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_3" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_3">Third WishList</label><br/>
+                                                            <input id="wishlist3_3" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_3" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '4'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child  {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_4">Child Name</label><br/>
+                                                            <input id="childname_4" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_4" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_4">First WishList</label><br/>
+                                                            <input id="wishlist1_4" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_4" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_4">Second WishList</label><br/>
+                                                            <input id="wishlist2_4" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_4" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_4">Third WishList</label><br/>
+                                                            <input id="wishlist3_4" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_4" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '5'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_5">Child Name</label><br/>
+                                                            <input id="childname_5" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_5" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_5">First WishList</label><br/>
+                                                            <input id="wishlist1_5" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_5" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_5">Second WishList</label><br/>
+                                                            <input id="wishlist2_5" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_5" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_5">Third WishList</label><br/>
+                                                            <input id="wishlist3_5" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_5" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '6'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_6">Child Name</label><br/>
+                                                            <input id="childname_6" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_6" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_6">First WishList</label><br/>
+                                                            <input id="wishlist1_6" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_6" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_6">Second WishList</label><br/>
+                                                            <input id="wishlist2_6" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_6" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_1">Third WishList</label><br/>
+                                                            <input id="wishlist3_6" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_6" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '7'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_7">Child Name</label><br/>
+                                                            <input id="childname_7" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_7" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_7">First WishList</label><br/>
+                                                            <input id="wishlist1_7" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_7" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_7">Second WishList</label><br/>
+                                                            <input id="wishlist2_7" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_7" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_7">Third WishList</label><br/>
+                                                            <input id="wishlist3_7" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_7" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '8'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex +1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_8">Child Name</label><br/>
+                                                            <input id="childname_8" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_8" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_8">First WishList</label><br/>
+                                                            <input id="wishlist1_8" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_8" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_8">Second WishList</label><br/>
+                                                            <input id="wishlist2_8" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_8" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_8">Third WishList</label><br/>
+                                                            <input id="wishlist3_8" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_8" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '9'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex+1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_9">Child Name</label><br/>
+                                                            <input id="childname_9" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_9" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_9">First WishList</label><br/>
+                                                            <input id="wishlist1_9" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_9" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_9">Second WishList</label><br/>
+                                                            <input id="wishlist2_9" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_9" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_9">Third WishList</label><br/>
+                                                            <input id="wishlist3_9" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_9" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-show="getdisplayIndex() == '10'">
+                                            <table>
+                                                <tr>
+                                                    <td>Child {{displayIndex+1}}
+
+                                                    </td>
+                                                    <td>
+                                                        wishList
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <label for="childname_10">Child Name</label><br/>
+                                                            <input id="childname_10" ng-model="myForm.childname" />
+                                                            <input type="file" id="file_10" file-model="myForm.family.child" />
+                                                            <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
+                                                        </div>
+
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <label for="wishlist1_10">First WishList</label><br/>
+                                                            <input id="wishlist1_10" ng-model="myForm.wishlist1" />
+                                                            <input type="file" id="wishlist1file_10" file-model="myForm.family.wishlist1" />
+                                                            <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                        <div>
+                                                            <label for="wishlist2_10">Second WishList</label><br/>
+                                                            <input id="wishlist2_10" ng-model="myForm.wishlist2" />
+                                                            <input type="file" id="wishlist2file_10" file-model="myForm.family.wishlist2" />
+                                                            <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
+                                                        </div>
+
+                                                        <div>
+                                                            <label for="wishlist3_10">Third WishList</label><br/>
+                                                            <input id="wishlist3_10" ng-model="myForm.wishlist3" />
+                                                            <input type="file" id="wishlist3file_10" file-model="myForm.family.wishlist3" />
+                                                            <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>
-                                   <!-- Name <input id="childname" ng-model="child.name" /><br/>
-                                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-
--->
-                                    <div>
-                                        <label for="childname">Child Name</label><br/>
-                                        <input id="childname" ng-model="myForm.childname" />
-                                        <input type="file" id="file" file-model="myForm.family.child" />
-                                        <img ng-src="images/{{myForm.family.child.name}}" width="60" height="70" /><br />
-                                    </div>
-
-                                </td>
-                                <td>
-
-
-                                    <div>
-                                        <label for="wishlist1">First WishList</label><br/>
-                                        <input id="wishlist1" ng-model="myForm.wishlist1" />
-                                        <input type="file" id="wishlist1file" file-model="myForm.family.wishlist1" />
-                                        <img ng-src="images/{{myForm.family.wishlist1.name}}" width="30" height="35" /><br />
-                                    </div>
-
-
-                                    <div>
-                                        <label for="wishlist2">Second WishList</label><br/>
-                                        <input id="wishlist2" ng-model="myForm.wishlist2" />
-                                        <input type="file" id="wishlist2file" file-model="myForm.family.wishlist2" />
-                                        <img ng-src="images/{{myForm.family.wishlist2.name}}" width="30" height="35" /><br />
-                                    </div>
-
-
-                                    <div>
-                                        <label for="wishlist3">Third WishList</label><br/>
-                                        <input id="wishlist3" ng-model="myForm.wishlist3" />
-                                        <input type="file" id="wishlist3file" file-model="myForm.family.wishlist3" />
-                                        <img ng-src="images/{{myForm.family.wishlist3.name}}" width="30" height="35" /><br />
-                                    </div>
-
+                                    <a ng-click="getPrevious()" class="btn btn-primary">Previous</a>
+                                    <a ng-click="getNext()" class="btn btn-primary">Next</a>
                                 </td>
                             </tr>
 
 
 
                         </table>
-
-
-
                     </div>
-
-
                 </td>
             </tr>
         </table>
     </div>
+
 
     <div style="padding-left: 550px;padding-top: 20px">
         <a href="#/register/family/conformation"

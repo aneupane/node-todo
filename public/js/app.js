@@ -11,6 +11,14 @@ config(function ($routeProvider, $sceDelegateProvider) {
             controller: 'HomeController'
         });
 
+    $routeProvider.when('/Faq',
+        {
+            templateUrl: 'view/landing/faq.html',
+            topNav: 'view/header/header.html',
+            controller: 'FaqController'
+        });
+
+
 
     $routeProvider.when('/Donate',
         {

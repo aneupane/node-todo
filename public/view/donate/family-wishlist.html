@@ -1,4 +1,12 @@
-<div style="padding-top: 170px">
+<div style="padding-top: 100px" ng-controller="HomeController">
+    <div style="padding-left: 1130px;z-index: 1000">
+        <a ng-click="loginShow()">{{logintext}}</a>
+    </div>
+
+    <div style="padding-left: 0px;z-index: 1000 ;position: absolute ;padding-top: -100px">
+        <a ng-show="getWelcomeText()" >{{welcometext}}</a>
+    </div>
+
 
     <div id='cssmenu' style="position: absolute;z-index: 100">
         <ul>
@@ -42,22 +50,17 @@
                     </table>
                 </td>
                 <td>
-
                     <div>
-
                         <select id="myselection"
                                 multiple="true"
                                 ng-model="selectedGift"
                                 ng-change="getGiftUpdate(selectedGift)"
                                 ng-options="o as o for o in p.wishlist" >
-
                         </select>
-
                     </div>
                     <div>
                         Selected Colors: {{selectedGift}}
                     </div>
-
                 </td>
             </tr>
         </table>
@@ -66,7 +69,7 @@
     </div>
 
     <div style="padding-left: 470px">
-        <a ng-click="submitDonate()" class="btn btn-primary">Submit Donate</a>
+        <a ng-click="submitDonate()" class="btn btn-primary">Submit Donation</a>
     </div>
 
 </div>
