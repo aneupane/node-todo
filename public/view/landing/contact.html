@@ -12,8 +12,44 @@
         </ul>
     </div>
 
-    <div style="height: 1000px">
-        Contact US
+    <div style="height: 900px">
+
+
+
+        <div  style="padding-left: 430px;padding-top: 80px">
+            <table>
+                <tr>
+                    <td>
+                        <div id="donateForm" style="float: left">
+                            <div>
+                                <label for="name">Name</label><br/>
+                                <input id="name" ng-model="myForm.name" />
+                            </div>
+
+                            <div>
+                                <label for="email">Email Address </label> <br/>
+                                <input id="email" ng-model="myForm.email"/>
+                            </div>
+
+
+                            <div>
+                                <label for="body"> Body </label> <br/>
+                                <textarea id="body" ng-model="message" cols="40" rows="20"></textarea>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div style="padding-left: 550px;padding-top: 20px">
+            <a href="#/contact/contact-conformation"
+               class="btn btn-primary">Submit</a>
+        </div>
+
+
     </div>
 </div>
 

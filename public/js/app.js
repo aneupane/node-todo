@@ -88,6 +88,11 @@ config(function ($routeProvider, $sceDelegateProvider) {
         controller: 'SubmitDonateController'
     });
 
+    $routeProvider.when('/contact/contact-conformation', {
+        templateUrl: 'view/contact/contact-conformation.html',
+        topNav: 'view/header/header.html'
+    });
+
     $routeProvider.otherwise({redirectTo: '/Home'});
 
     $sceDelegateProvider.resourceUrlWhitelist([
