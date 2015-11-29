@@ -17,7 +17,7 @@ angular.module('donate')
 
             $scope.submitDonar= function () {
 
-                var data = JSON.stringify({
+              /*  var data = JSON.stringify({
                     userName: $scope.myForm.username,
                     passWord: $scope.myForm.password,
                     role : 'donar'
@@ -26,7 +26,7 @@ angular.module('donate')
                 $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/register", data)
                     .success(function (data, status) {
 
-                    });
+                    });*/
 
 
                 $location.path('/register/donar/conformation');
