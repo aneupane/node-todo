@@ -29,10 +29,10 @@
 
         <table border="1">
             <tr ng-repeat="p in familyWish">
-                <td ><div>  {{p.childname}}</div>
+                <td ><div>  {{p.child.name}}</div>
                     <div>
                         <div>
-                            <img ng-src="images/{{p.childname}}.jpg" style="width: 50px;height: 50px" />
+                            <img ng-src="images/{{p.child.image}}" style="width: 50px;height: 50px" />
                         </div>
                     </div>
                 </td>
@@ -41,9 +41,9 @@
                         <tr ng-repeat="y in p.wishlist">
 
                             <td>
-                            <div>  {{y}}</div>
+                            <div> {{y.name}}</div>
                                  <div>
-                                    <img ng-src="images/{{y}}.jpg" style="width: 50px;height: 50px" />
+                                    <img ng-src="images/{{y.image}}" style="width: 50px;height: 50px" />
                                  </div>
                             </td>
                         </tr>
@@ -55,7 +55,7 @@
                                 multiple="true"
                                 ng-model="selectedGift"
                                 ng-change="getGiftUpdate(selectedGift)"
-                                ng-options="o as o for o in p.wishlist" >
+                                ng-options="item.name for item in p.wishlist" >
                         </select>
                     </div>
                 </td>

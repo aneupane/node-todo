@@ -1,9 +1,9 @@
 ﻿
 angular.module('donate')
-    .controller('DonateController', ['$scope', '$location', 'FamilyService',
+    .controller('DonateController', ['$http' ,'$scope', '$location', 'FamilyService',
         'UserAuthorizationService','LoginStatusService',
 
-        function ($scope ,$location, FamilyService ,UserAuthorizationService ,LoginStatusService ) {
+        function ($http,$scope ,$location, FamilyService ,UserAuthorizationService ,LoginStatusService ) {
 
 
             var logintext= LoginStatusService.getLoginText();
@@ -116,18 +116,28 @@ angular.module('donate')
             };
 
 
-            var familyList = family(id);
-
-
-            $scope.familyWish = familyList;
-
-
-
 
             var init = function () {
+
+                var familyId =  FamilyService.getFamilyId();
+
+                var data = JSON.stringify({
+                    familyId: familyId
+                });
+
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/donation/wishlist", data)
+                    .success(function (data, status) {
+
+                        $scope.familyWish = data.wishes;
+
+                    });
+
+
             };
 
             init();
+
 
         }]);
 
