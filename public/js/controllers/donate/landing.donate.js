@@ -50,10 +50,9 @@ angular.module('donate')
 
             var familydonation ={};
 
-            $scope.doDecorate= function () {
 
-                alert('Hello');
-            };
+            var id =FamilyService.getFamilyId();
+
 
 
             $scope.submitDonate = function(){
@@ -70,7 +69,7 @@ angular.module('donate')
 
             //var id ="123";  //FamilyService.getFamilyId();
 
-            var id =FamilyService.getFamilyId();
+
 
              familydonation= [
                 {

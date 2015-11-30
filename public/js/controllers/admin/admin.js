@@ -63,7 +63,7 @@ angular.module('app')
 
                     });
                 return true;
-            }
+            };
 
 
             var init = function () {
@@ -79,14 +79,12 @@ angular.module('app')
 
                         $scope.family = data.admindtos;
 
-                        
                     });
 
 
             };
 
             init();
-
 
 
         }]);

@@ -24,7 +24,14 @@
 
         <div style="padding-left: 470px">
             <label for="family" >Select Family </label> <br/>
-            <select id="family" ng-options="item as item.name for item in familyList track by item.username" ng-model="selected"></select>
+            <select id="family" ng-options="item as item.name for item in familyList track by item.username"
+                    ng-model="familyusername"
+
+                    ng-change="updateFamily(familyusername)"
+
+            >
+
+            </select>
         </div>
 
         <div style="padding-left: 470px">
