@@ -1,9 +1,9 @@
 ﻿
 angular.module('donate')
-    .controller('DonateController', ['$http' ,'$scope', '$location', 'FamilyService',
+    .controller('DonateController', ['$http' ,'$scope', '$location', 'FamilyService','GiftService',
         'UserAuthorizationService','LoginStatusService',
 
-        function ($http,$scope ,$location, FamilyService ,UserAuthorizationService ,LoginStatusService ) {
+        function ($http,$scope ,$location, FamilyService , GiftService ,UserAuthorizationService ,LoginStatusService ) {
 
 
             var logintext= LoginStatusService.getLoginText();
@@ -51,68 +51,52 @@ angular.module('donate')
             var familydonation ={};
 
 
-            var id =FamilyService.getFamilyId();
+
 
 
 
             $scope.submitDonate = function(){
+
+                var data = JSON.stringify({
+
+                    gift :  GiftService.getGifts(),
+                    familyId : FamilyService.getFamilyId(),
+                    userId : UserAuthorizationService.getUserName()
+
+                });
+
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/donation/final/submit", data)
+                    .success(function (data, status) {
+
+
+
+                    });
+
+
+
+
+
                 $location.path('/donate/conformation');
+
+
+
+
+
+
+
             };
 
 
-            $scope.getGiftUpdate = function(selectedGift) {
-                $scope.giftList = $scope.selectedGift;
-                // use $scope.selectedItem.code and $scope.selectedItem.name here
-                // for other stuff ...
-            }
+            $scope.getGiftUpdate = function(gift) {
 
 
-            //var id ="123";  //FamilyService.getFamilyId();
+                GiftService.addGifts(gift);
 
+                var giftsreceived = GiftService.getGifts();
 
+                $scope.gifts = giftsreceived;
 
-             familydonation= [
-                {
-                    "familyid": "123",
-                    "payload": [
-                        {
-                            "childname": "jerry",
-                            "wishlist": [
-                                "ipad",
-                                "headphone",
-                                "iphone"
-                            ]
-                        },
-                        {
-                            "childname": "berry",
-                            "wishlist": [
-                                "ps4",
-                                "xbox",
-                                "ipad"
-                            ]
-                        },
-                        {
-                            "childname": "sherry",
-                            "wishlist": [
-                                "ps4",
-                                "xbox",
-                                "iphone"
-                            ]
-                        }
-                    ]
-                }
-            ];
-
-
-
-            var family = function (id) {
-
-                var result = null;
-                angular.forEach(familydonation, function (family) {
-                    if (family.familyid === id) result = angular.copy(family.payload);
-                });
-
-                return result;
             };
 
 
