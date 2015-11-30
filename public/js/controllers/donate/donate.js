@@ -1,31 +1,30 @@
-﻿
-angular.module('donate')
-    .controller('StoreController',  ['$scope','$modal', '$location',
-        'FamilyService','UserAuthorizationService','LoginStatusService',
+﻿angular.module('donate')
+    .controller('StoreController', ['$http' ,'$scope', '$modal', '$location',
+        'FamilyService', 'UserAuthorizationService', 'LoginStatusService',
 
-        function ($scope , $modal, $location , FamilyService , UserAuthorizationService ,LoginStatusService) {
+        function ($http ,$scope, $modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
 
 
-            var logintext= LoginStatusService.getLoginText();
+            var logintext = LoginStatusService.getLoginText();
 
-            if(logintext !== 'Log Out'){
+            if (logintext !== 'Log Out') {
                 $scope.logintext = 'Log In';
                 LoginStatusService.setLoginText(logintext);
-            }else{
+            } else {
                 $scope.logintext = logintext;
             }
 
 
-            $scope.getUserRole= function () {
+            $scope.getUserRole = function () {
                 var userRole = UserAuthorizationService.getRole();
                 return userRole;
             };
 
-            $scope.getWelcomeText = function(){
+            $scope.getWelcomeText = function () {
                 var user = UserAuthorizationService.getUserName();
 
-                if( user !== '' && user !== 'normal'){
-                    $scope.welcometext = 'welcome ' + user +'!!!';
+                if (user !== '' && user !== 'normal') {
+                    $scope.welcometext = 'welcome ' + user + '!!!';
                     return true;
                 }
                 return false;
@@ -34,14 +33,14 @@ angular.module('donate')
 
             $scope.loginShow = function () {
 
-                if($scope.logintext === 'Log Out'){
+                if ($scope.logintext === 'Log Out') {
                     $scope.logintext = 'Log In';
-                    $scope.welcometext ='';
+                    $scope.welcometext = '';
                     UserAuthorizationService.setRole('normal');
                     UserAuthorizationService.setUserName('normal');
                     alert('you are being logged out from the system');
                     return true;
-                } else{
+                } else {
                     $scope.logintext = 'Log Out';
                     var dailog = $modal.open({
                         templateUrl: 'view/login/login.view.html',
@@ -51,25 +50,24 @@ angular.module('donate')
             };
 
 
-            $scope.doDecorate= function (product) {
+            $scope.doDecorate = function (product) {
 
-                var p= product.name;
+                var p = product.name;
 
                 var styleProduct = 'myStyle_' + product.price;
 
                 $scope.myStyle = {
                     "border-style": "solid",
                     "border-width": "2px 10px 4px 20px",
-                    "border-color":"#4a4a4a"
+                    "border-color": "#4a4a4a"
                 };
 
             };
 
 
+            $scope.getFamily = function () {
 
-            $scope.getFamily = function (){
-
-                var familyId= "123";
+                var familyId = "123";
                 FamilyService.setFamilyId(familyId);
 
                 $location.path('/donate/familydonation');
@@ -92,7 +90,7 @@ angular.module('donate')
 
                 ]
             }, {
-                id:'345',
+                id: '345',
                 name: 'Dave Family',
                 description: "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
                 shine: 9,
@@ -117,10 +115,26 @@ angular.module('donate')
                 ]
             }];
 
+
             var init = function () {
+
+                var data = JSON.stringify({
+                    family: 'approved'
+                });
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/donation/famalies", data)
+                    .success(function (data, status) {
+
+                        $scope.familyList = data.familyList;
+
+
+                    });
+
+
             };
 
             init();
+
 
         }]);
 

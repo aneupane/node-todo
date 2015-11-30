@@ -8,27 +8,27 @@ angular.module('donate')
             var myForm={};
 
 
-
-
-
-
-
-
-
             $scope.submitDonar= function () {
 
-              /*  var data = JSON.stringify({
-                    userName: $scope.myForm.username,
-                    passWord: $scope.myForm.password,
+                var data = JSON.stringify({
+                    username: $scope.myForm.username,
+                    password: $scope.myForm.password,
+                    name: $scope.myForm.name,
+                    street: $scope.myForm.street,
+                    city: $scope.myForm.city,
+                    zipcode: $scope.myForm.zipcode,
+                    phoneno: $scope.myForm.phoneno,
+                    emailaddress: $scope.myForm.emailaddress,
+                    profilepicture: $scope.myForm.donar.picture.name,
                     role : 'donar'
                 });
 
-                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/register", data)
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/register/donar", data)
                     .success(function (data, status) {
 
-                    });*/
-
-
+                    });
+                
                 $location.path('/register/donar/conformation');
             }
 

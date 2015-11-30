@@ -24,7 +24,7 @@
 
         <div style="padding-left: 470px">
             <label for="family" >Select Family </label> <br/>
-            <select id="family" ng-options="item as item.name for item in products track by item.id" ng-model="selected"></select>
+            <select id="family" ng-options="item as item.name for item in familyList track by item.username" ng-model="selected"></select>
         </div>
 
         <div style="padding-left: 470px">
@@ -33,15 +33,14 @@
 
         <div class="list-group middle"  style="height: 90%;width:60%;padding-left: 350px;">
             <!--  Product Container  -->
-            <div class="list-group-item"
-                 ng-repeat="product in products" ng-click="doDecorate(product)" ng-style="myStyle">
+            <div class="list-group-item" ng-repeat="family in familyList" >
 
                 <!-- ng-style="myStyle_{{product.price}-->
-                <h3>{{product.name}} <em class="pull-right">{{product.price}}</em></h3>
+                <h3>{{family.name}} <em class="pull-right">{{family.city}}</em></h3>
                 <!-- Image Gallery  -->
                 <div class="gallery">
                     <div class="img-wrap">
-                        <img ng-src="{{product.images[0]}}"  style="width: 100px;height: 100px"/>
+                        <img ng-src="{{family.image}}"  style="width: 100px;height: 100px"/>
                     </div>
                 </div>
             </div>

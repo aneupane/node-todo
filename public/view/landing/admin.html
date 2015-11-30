@@ -24,10 +24,10 @@
 
 	<div style="height: 1000px;padding-top: 100px ; padding-left: 100px">
 
-		<table style="border-style: solid; border-width: 5px;border-color:#0000ff;">
+		<table  border="3" >
 			<tr>
 				<td class ="admintable">
-					 Family Name
+					Family Name
 				</td>
 
 				<td class ="admintable">
@@ -45,37 +45,38 @@
 				<td class ="admintable">Status
 
 				</td>
-				<td class ="admintable">Admin Action
+				<td class ="admintable" colspan="2" >Admin Action
 
 				</td>
 			</tr>
 
-			<tr>
-				<td class ="admintable">
-					{{familyname}}
+			<tr ng-repeat="f in family">
+				<td ><div >  {{f.familyname}}</div>
 				</td>
 
-				<td class ="admintable">
-					{{children}}
+				<td ><div>  {{f.childname}}</div>
 				</td>
 
-				<td class ="admintable"> {{wishlist}}
-
+				<td ><div>  {{f.wishlist}}</div>
 				</td>
 
-				<td class ="admintable"> {{biography}}
 
+				<td ><div>  {{f.biography}}</div>
 				</td>
 
-				<td class ="admintable">
-					{{status}}
 
+				<td ><div>  {{f.status}}</div>
 				</td>
-				<td class ="admintable">
-					<a ng-click="approveWishList()" class="btn btn-primary">Approve</a>
-					<a ng-click="declineWishList()" class="btn btn-primary">Disapprove</a>
 
+
+				<td style="padding-left: 4px;padding-top: 5px">
+					<a ng-click="approveWishList(f)" class="btn btn-primary">Approve</a>
 				</td>
+				<td style="padding-left: 4px;padding-top: 5px">
+					<a ng-click="declineWishList(f)" class="btn btn-primary">Decline</a>
+				</td>
+				</td>
+
 			</tr>
 
 		</table>

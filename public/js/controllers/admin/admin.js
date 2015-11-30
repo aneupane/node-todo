@@ -1,10 +1,9 @@
 angular.module('app')
-    .controller('AdminController', ['$scope', '$location', 'FamilyService', 'UserAuthorizationService',
+    .controller('AdminController', ['$http' ,'$scope', '$location', 'FamilyService', 'UserAuthorizationService',
 
-        function ($scope, $location, FamilyService, UserAuthorizationService) {
+        function ($http ,$scope, $location, FamilyService, UserAuthorizationService) {
 
-            var status ="submitted"
-
+            var status ="submitted";
 
             var familyWishRecord= {
                 "familyname": "J.Evans",
@@ -37,29 +36,58 @@ angular.module('app')
             }
 
 
-            $scope.approveWishList= function () {
+            $scope.declineWishList= function (f) {
 
-                $scope.status= "Approved";
+                var data = JSON.stringify({
+                    status: 'DECLINED',
+                    username : f.username
+                });
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/admin/status", data)
+                    .success(function (data, status) {
+
+                    });
                 return true;
             }
 
 
-            $scope.declineWishList= function () {
-                $scope.status= "Declined";
+            $scope.approveWishList= function (f) {
 
+                var data = JSON.stringify({
+                    status: 'APPROVED',
+                    username : f.username
+                });
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/admin/status", data)
+                    .success(function (data, status) {
+
+                    });
                 return true;
             }
-
-
-
-
-
 
 
             var init = function () {
+
+
+                var data = JSON.stringify({
+                    family: 'all'
+                });
+
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/admin/family", data)
+                    .success(function (data, status) {
+
+                        $scope.family = data.admindtos;
+
+                        
+                    });
+
+
             };
 
             init();
+
+
 
         }]);
 
