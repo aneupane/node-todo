@@ -1,4 +1,4 @@
-<div style="padding-top: 100px">
+<div style="padding-top: 150px">
 
     <div style="padding-left: 1130px;z-index: 1000">
         <a ng-click="loginShow()">{{logintext}}</a>
@@ -23,7 +23,7 @@
             <li ng-show="getUserRole() == 'family' ">
                 <a href='#ProfileFamily'><span>Profile</span></a>
             </li>
-            <li ng-show=" getUserRole() == 'donar' ">
+            <li ng-show="getUserRole() == 'donar' ">
                 <a href='#ProfileDonar'><span>Profile</span></a>
             </li>
 
@@ -31,17 +31,17 @@
 
     </div>
 
-    <div style="padding-left: 340px;padding-top: 20px">
-        <p><b>
-            Please  Register as donar or the Family to proceed the Donation process
-        </b>
-        </p>
-    </div>
+    <div style="height: 1000px">
+        <div style="padding-left: 340px;padding-top: 200px">
+            <p><b>
+                Please  Register as donar or the Family to proceed the Donation process
+            </b>
+            </p>
+        </div>
 
-    <div style="padding-left: 500px;padding-top: 80px">
-        <a href="#/register/donar" class="btn btn-primary"> Donor </a>
-        <a href="#/register/family" class="btn btn-primary"> Family </a>
-    </div>
-    <div style="height: 500px;">
+        <div style="padding-left: 500px;padding-top: 80px">
+            <a href="#/register/donar" class="btn btn-primary"> Donor </a>
+            <a href="#/register/family" class="btn btn-primary"> Family </a>
+        </div>
     </div>
 </div>

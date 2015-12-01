@@ -5,7 +5,8 @@ angular.module('donate')
 
         function ( $http ,$scope ,$modal, $location , FamilyService , UserAuthorizationService) {
 
-           var displayIndex= 0;
+
+            var displayIndex= 0;
 
             $scope.displayIndex = displayIndex;
 
@@ -15,7 +16,10 @@ angular.module('donate')
                 $scope.logintext = 'Log In';
             }
 
-
+            $scope.getUserRole= function () {
+                var userRole = UserAuthorizationService.getRole();
+                return userRole;
+            };
 
             $scope.getWelcomeText = function(){
                 var user = UserAuthorizationService.getUserName();
@@ -26,6 +30,28 @@ angular.module('donate')
                 }
                 return false;
             };
+
+
+            $scope.loginShow = function () {
+
+                if($scope.logintext === 'Log Out'){
+                    $scope.logintext = 'Log In';
+                    LoginStatusService.setLoginText('Log In');
+                    $scope.welcometext ='';
+                    UserAuthorizationService.setRole('normal');
+                    UserAuthorizationService.setUserName('normal');
+                    alert('you are being logged out from the system');
+                    return true;
+                } else{
+                    $scope.logintext = 'Log Out';
+                    LoginStatusService.setLoginText('Log Out');
+                    var dailog = $modal.open({
+                        templateUrl: 'view/login/login.view.html',
+                        controller: 'LoginController'
+                    });
+                }
+            };
+
 
 
             $scope.getNext= function(){
@@ -191,6 +217,9 @@ angular.module('donate')
 
 
 
+
+
+
                 var data = JSON.stringify({
 
                     username: $scope.myForm.username,
@@ -203,6 +232,7 @@ angular.module('donate')
                     emailaddress: $scope.myForm.emailaddress,
                     noofchildren : $scope.data.singleSelect,
                     biography : $scope.message,
+                    profilepicture : $scope.myForm.family.familypic.name,
 
                     childname_0 :$scope.myForm.childname_0,
                     childname_1 :$scope.myForm.childname_1,
@@ -269,6 +299,11 @@ angular.module('donate')
             };
 
             init();
+
+
+            $scope.$on('$routeChangeSuccess', function (e, current, previous) {
+                $scope.currentRoute = current;
+            });
 
         }]);
 

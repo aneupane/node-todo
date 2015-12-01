@@ -97,6 +97,17 @@
                         </div>
                     </div>
 
+                    <div id="profilepic" style="float: right">
+
+
+                        <div>
+                            <label for="childname_0">Family Pic</label><br/>
+                            <input type="file" id="family_pic" file-model="myForm.family.familypic" />
+                            <img id="familypic" ng-src="images/{{myForm.family.familypic.name}}" width="200" height="250" /><br />
+                        </div>
+
+                    </div>
+
 
                     <div id="wishlist" style="float: right">
 
@@ -615,58 +626,6 @@
         <!--<a href="#/register/family/conformation" class="btn btn-primary">Submit</a>-->
 
         <a ng-click="submitFamily()" class="btn btn-primary">Submit</a>
-
-    </div>
-
-
-
-    <div style="height: 400px;padding-top: 50px ; padding-left: 400px">
-
-        <div style="padding-left: 100px;padding-bottom: 30px">
-             Inventory
-        </div>
-        <div style="padding-bottom: 20px">
-            <input id="searchitem" ng-model="searchitem" />
-            <input type="button" value="search" />
-
-        </div>
-        <table style="border-style: solid; border-width: 5px;border-color:#0000ff;">
-
-            <tr>
-                <td class ="admintable">
-                   Item Image
-                </td>
-
-                <td class ="admintable">
-                   Item Name
-                </td>
-
-                <td class ="admintable" > Quantity
-
-                </td>
-
-
-            </tr>
-
-            <tr>
-                <td class ="admintable">
-
-                </td>
-
-                <td class ="admintable">
-                   car
-                </td>
-
-                <td class ="admintable"> 20
-
-                </td>
-
-
-            </tr>
-
-        </table>
-
-
 
     </div>
 
