@@ -1,4 +1,12 @@
-<div style="padding-top: 170px">
+<div style="padding-top: 100px">
+
+	<div style="padding-left: 1130px;z-index: 1000">
+		<a ng-click="loginShow()">{{logintext}}</a>
+	</div>
+
+	<div style="padding-left: 0px;z-index: 1000 ;position: absolute ;padding-top: -100px">
+		<a ng-show="getWelcomeText()" >{{welcometext}}</a>
+	</div>
 
 	<div id='cssmenu' style="position: absolute;z-index: 100">
 		<ul>
@@ -19,7 +27,7 @@
 
 	</div>
 
-	<div style="height: 600px; padding-left: 250px;padding-top: 50px">
+	<div style="height: 600px; padding-left: 350px;padding-top: 100px">
 
 		<div class="qa">
 			<p class="q"><span><b>Q: </b></span><b>Can I donate without registering ?</b></p>

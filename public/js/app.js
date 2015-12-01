@@ -53,15 +53,20 @@ config(function ($routeProvider, $sceDelegateProvider) {
 
     $routeProvider.when('/Contact', {
         templateUrl: 'view/landing/contact.html',
-        topNav: 'view/header/header.html'
+        topNav: 'view/header/header.html',
+        controller: 'ContactUsController'
     });
+
     $routeProvider.when('/AboutUs', {
         templateUrl: 'view/landing/aboutus.html',
         topNav: 'view/header/header.html',
+        controller: 'AboutUsController'
     });
+
     $routeProvider.when('/Register', {
         templateUrl: 'view/landing/register.html',
         topNav: 'view/header/header.html',
+        controller: 'RegisterController'
     });
 
 

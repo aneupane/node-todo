@@ -1,10 +1,8 @@
-angular.module('app')
-    .controller('AdminController', ['$http' ,'$scope', '$location',
-        'FamilyService', 'UserAuthorizationService', 'LoginStatusService',
+﻿angular.module('app')
+    .controller('ContactUsController', ['$scope','$modal', '$location', 'FamilyService',
+        'UserAuthorizationService','LoginStatusService',
 
-        function ($http ,$scope, $location, FamilyService, UserAuthorizationService ,LoginStatusService) {
-
-
+        function ($scope,$modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
 
             var logintext= $scope.logintext;
 
@@ -49,55 +47,10 @@ angular.module('app')
             };
 
 
-            $scope.declineWishList= function (f) {
 
-                var data = JSON.stringify({
-                    status: 'DECLINED',
-                    username : f.username
-                });
-
-                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/admin/status", data)
-                    .success(function (data, status) {
-
-                    });
-                return true;
-            }
-
-
-            $scope.approveWishList= function (f) {
-
-                var data = JSON.stringify({
-                    status: 'APPROVED',
-                    username : f.username
-                });
-
-                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/admin/status", data)
-                    .success(function (data, status) {
-
-                    });
-                return true;
-            };
-
-
-            var init = function () {
-
-
-                var data = JSON.stringify({
-                    family: 'all'
-                });
-
-
-                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/admin/family", data)
-                    .success(function (data, status) {
-
-                        $scope.family = data.admindtos;
-
-                    });
-
-
-            };
-
-            init();
+            $scope.$on('$routeChangeSuccess', function (e, current, previous) {
+                $scope.currentRoute = current;
+            });
 
         }]);
 

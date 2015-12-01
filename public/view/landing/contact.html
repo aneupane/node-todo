@@ -1,4 +1,12 @@
-<div style="padding-top: 170px">
+<div style="padding-top: 100px">
+
+    <div style="padding-left: 1130px;z-index: 1000">
+        <a ng-click="loginShow()">{{logintext}}</a>
+    </div>
+
+    <div style="padding-left: 0px;z-index: 1000 ;position: absolute ;padding-top: -100px">
+        <a ng-show="getWelcomeText()" >{{welcometext}}</a>
+    </div>
 
     <div id='cssmenu' style="position: absolute;z-index: 100">
         <ul>
@@ -22,9 +30,7 @@
 
     </div>
 
-    <div style="height: 900px">
-
-
+    <div style="height: 1000px">
 
         <div  style="padding-left: 430px;padding-top: 80px">
             <table>
@@ -44,7 +50,7 @@
 
                             <div>
                                 <label for="body"> Body </label> <br/>
-                                <textarea id="body" ng-model="message" cols="40" rows="20"></textarea>
+                                <textarea id="body" ng-model="message" cols="40" rows="10"></textarea>
                             </div>
                         </div>
 
@@ -55,10 +61,8 @@
 
 
         <div style="padding-left: 550px;padding-top: 20px">
-            <a href="#/contact/contact-conformation"
-               class="btn btn-primary">Submit</a>
+            <a href="#/contact/contact-conformation" class="btn btn-primary">Submit</a>
         </div>
-
 
     </div>
 </div>

@@ -12,16 +12,8 @@
 
 <body style="background-color:#00FFFF" ng-controller="RootController">
 
-
 <div class="navbar navbar-default navbar-fixed-top top-navbar">
-	<!--<div class="container-fluid">
-		<ul class="nav navbar-nav navbar-right">
-			<li><a ng-click="loginShow()" title="Log In ">Log In</a></li>
-		</ul>
-	</div>-->
-	<div id="top-nav-container" class="second-top-nav">
-		<div id="top-nav" ng-include="currentRoute.topNav">
-		</div>
+	<div id="top-nav" ng-include="currentRoute.topNav">
 	</div>
 </div>
 
@@ -50,22 +42,27 @@
 <script src="js/services/gift.service.js"></script>
 
 
+<script src="js/controllers/aboutus/aboutus.js"></script>
 <script src="js/controllers/admin/admin.js"></script>
+
+<script src="js/controllers/contact/contact.us.js"></script>
 
 <script src="js/controllers/donate/donate.js"></script>
 <script src="js/controllers/donate/landing.donate.js"></script>
 <script src="js/controllers/donate/submit.donate.js"></script>
+<script src="js/controllers/faq/faq.js"></script>
 
 <script src="js/controllers/home/home.js"></script>
-<script src="js/controllers/login/login.js"></script>
 
+<script src="js/controllers/login/login.js"></script>
 
 <script src="js/controllers/profile/donar.profile.js"></script>
 <script src="js/controllers/profile/family.profile.js"></script>
 
 
-<script src="js/controllers/register/registerdonarconform.js"></script>
+<script src="js/controllers/register/register.js"></script>
 <script src="js/controllers/register/registerdonar.js"></script>
+<script src="js/controllers/register/registerdonarconform.js"></script>
 <script src="js/controllers/register/registerfamily.js"></script>
 <script src="js/controllers/register/registerfamilyconform.js"></script>
 
