@@ -1,6 +1,15 @@
-<div style="padding-top: 170px">
+<div style="padding-top: 100px">
 
-  <div id='cssmenu' style="position: absolute;z-index: 100">
+
+  <div style="padding-left: 1130px;z-index: 1000">
+    <a ng-click="loginShow()">{{logintext}}</a>
+  </div>
+
+  <div style="padding-left: 0px;z-index: 1000 ;position: absolute ;padding-top: -100px">
+    <a ng-show="getWelcomeText()" >{{welcometext}}</a>
+  </div>
+
+  <div id='cssmenu' style="position: absolute;z-index: 100 ; padding-left: 270px">
     <ul>
       <li><a href='#Home'><span>Home</span></a></li>
       <li ng-show="getUserRole() == 'normal' || getUserRole() == 'donar' " >
@@ -79,7 +88,7 @@
   </div>
 
   <div style="padding-left: 550px;padding-top: 20px">
-   <!-- href="#/register/donar/conformation"-->
+    <!-- href="#/register/donar/conformation"-->
     <a ng-click="submitDonar()" class="btn btn-primary">Submit</a>
   </div>
 </div>
