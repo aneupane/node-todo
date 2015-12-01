@@ -1,8 +1,8 @@
 angular.module('app')
-    .controller('DonarProfileController', ['$scope','$modal', '$location', 'FamilyService',
+    .controller('DonarProfileController', ['$http','$scope','$modal', '$location', 'FamilyService',
         'UserAuthorizationService','LoginStatusService',
 
-        function ($scope,$modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
+        function ($http,$scope,$modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
 
             var logintext= $scope.logintext;
 
@@ -48,9 +48,20 @@ angular.module('app')
 
 
 
-            $scope.$on('$routeChangeSuccess', function (e, current, previous) {
-                $scope.currentRoute = current;
-            });
+            var init = function () {
+                var userId =  UserAuthorizationService.getUserName();
+                var data = JSON.stringify({
+                    userId: userId
+                });
+
+                $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/transaction/donar", data)
+                    .success(function (data, status) {
+                        $scope.itemList = data.itemList;
+                    });
+            };
+
+            init();
+
 
         }]);
 

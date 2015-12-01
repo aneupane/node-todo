@@ -34,8 +34,44 @@
 
     <div style="height: 1000px ; padding-top: 100px;padding-left: 300px">
 
-        <b>View your Wish Status </b>
+        <div style="padding-left: 300px "><b>View your Wish Status </b></div>
 
+
+        <div style="width: 70%;height: 90%;padding-left: 30% ; padding-top: 10px">
+
+            <table border="1">
+                <tr>
+                    <td>
+                        <b>Item Name
+                        </b>
+                    </td>
+                    <td>
+                        <b>
+                            Item Status
+                        </b>
+                    </td>
+                </tr>
+                <tr ng-repeat="p in itemList">
+                    <td >
+                        <div>  {{p.itemname}}
+                        </div>
+
+                      <!--  <div>
+                            <div>
+                                <img ng-src="images/{{p.child.image}}" style="width: 50px;height: 50px" />
+                            </div>
+                        </div>-->
+
+                    </td>
+
+                    <td >
+                        <div>
+                            {{p.status}}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 
