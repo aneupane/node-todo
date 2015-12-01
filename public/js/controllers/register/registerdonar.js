@@ -6,13 +6,12 @@ angular.module('donate')
 
         function ($http ,$scope , $location , FamilyService , UserAuthorizationService , LoginStatusService) {
 
+            var logintext= LoginStatusService.getLoginText();
 
-
-            var logintext= $scope.logintext;
-
-            if(logintext !== 'Log Out'){
+            if(logintext === 'Log Out'){
+                $scope.logintext = logintext;
+            }else{
                 $scope.logintext = 'Log In';
-                LoginStatusService.setLoginText(logintext);
             }
 
             $scope.getUserRole= function () {

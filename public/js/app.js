@@ -113,7 +113,8 @@ config(function ($routeProvider, $sceDelegateProvider) {
 
     $routeProvider.when('/contact/contact-conformation', {
         templateUrl: 'view/contact/contact-conformation.html',
-        topNav: 'view/header/header.html'
+        topNav: 'view/header/header.html',
+        controller: 'ContactSubmitController'
     });
 
     $routeProvider.otherwise({redirectTo: '/Home'});

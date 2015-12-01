@@ -1,14 +1,16 @@
 angular.module('app')
     .controller('LoginController', ['$scope', '$modalInstance', '$http', '$location'
-        , 'FamilyService', 'UserAuthorizationService',
+        , 'FamilyService', 'UserAuthorizationService', 'LoginStatusService',
 
         function ($scope, $modalInstance, $http, $location
-        , FamilyService, UserAuthorizationService) {
+        , FamilyService, UserAuthorizationService, LoginStatusService) {
 
             $scope.form = {};
 
 
             $scope.ok = function () {
+
+                LoginStatusService.setLoginText('Log In');
                 $modalInstance.close();
             };
 
@@ -36,6 +38,7 @@ angular.module('app')
                         }else{
 
                             alert('login failed ');
+                            LoginStatusService.setLoginText('Log In')
                             $modalInstance.close();
                         }
                     })

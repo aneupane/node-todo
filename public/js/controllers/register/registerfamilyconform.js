@@ -10,7 +10,6 @@ angular.module('donate')
 
             if(logintext !== 'Log Out'){
                 $scope.logintext = 'Log In';
-                LoginStatusService.setLoginText(logintext);
             }
 
             $scope.getUserRole= function () {
@@ -27,6 +26,7 @@ angular.module('donate')
                 }
                 return false;
             };
+
 
             $scope.loginShow = function () {
 
@@ -47,13 +47,6 @@ angular.module('donate')
                     });
                 }
             };
-
-
-
-            $scope.getUserRole= function () {
-                var userRole = UserAuthorizationService.getRole();
-                return userRole;
-            }
 
 
             var init = function () {

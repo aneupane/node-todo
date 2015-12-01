@@ -5,13 +5,12 @@ angular.module('donate')
 
         function ($scope , $location , FamilyService , UserAuthorizationService , LoginStatusService) {
 
+            var logintext= LoginStatusService.getLoginText();
 
-
-            var logintext= $scope.logintext;
-
-            if(logintext !== 'Log Out'){
+            if(logintext === 'Log Out'){
+                $scope.logintext = logintext;
+            }else{
                 $scope.logintext = 'Log In';
-                LoginStatusService.setLoginText(logintext);
             }
 
             $scope.getUserRole= function () {
@@ -48,8 +47,6 @@ angular.module('donate')
                     });
                 }
             };
-
-
 
             $scope.getUserRole= function () {
                 var userRole = UserAuthorizationService.getRole();

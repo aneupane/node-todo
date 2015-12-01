@@ -1,5 +1,5 @@
-﻿angular.module('app')
-    .controller('RegisterController', ['$scope','$modal', '$location', 'FamilyService',
+angular.module('app')
+    .controller('ContactSubmitController', ['$scope','$modal', '$location', 'FamilyService',
         'UserAuthorizationService','LoginStatusService',
 
         function ($scope,$modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
@@ -46,6 +46,7 @@
                     });
                 }
             };
+
 
 
             $scope.$on('$routeChangeSuccess', function (e, current, previous) {

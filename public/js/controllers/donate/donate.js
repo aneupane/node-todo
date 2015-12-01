@@ -5,26 +5,24 @@
         function ($http ,$scope, $modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
 
 
-            var logintext = LoginStatusService.getLoginText();
+            var logintext= LoginStatusService.getLoginText();
 
-            if (logintext !== 'Log Out') {
-                $scope.logintext = 'Log In';
-                LoginStatusService.setLoginText(logintext);
-            } else {
+            if(logintext === 'Log Out'){
                 $scope.logintext = logintext;
+            }else{
+                $scope.logintext = 'Log In';
             }
 
-
-            $scope.getUserRole = function () {
+            $scope.getUserRole= function () {
                 var userRole = UserAuthorizationService.getRole();
                 return userRole;
             };
 
-            $scope.getWelcomeText = function () {
+            $scope.getWelcomeText = function(){
                 var user = UserAuthorizationService.getUserName();
 
-                if (user !== '' && user !== 'normal') {
-                    $scope.welcometext = 'welcome ' + user + '!!!';
+                if( user !== '' && user !== 'normal'){
+                    $scope.welcometext = 'welcome ' + user +'!!!';
                     return true;
                 }
                 return false;

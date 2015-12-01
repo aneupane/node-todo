@@ -6,7 +6,7 @@
 
 angular.module('app')
     .factory('LoginStatusService', function () {
-        var loginText = {text: '' };
+        var loginText = {text: 'Log In' };
 
         return {
             getLoginText: function () {

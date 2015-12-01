@@ -4,11 +4,12 @@
 
         function ($scope,$modal, $location, FamilyService, UserAuthorizationService, LoginStatusService) {
 
-            var logintext= $scope.logintext;
+            var logintext= LoginStatusService.getLoginText();
 
-            if(logintext !== 'Log Out'){
+            if(logintext === 'Log Out'){
+                $scope.logintext = logintext;
+            }else{
                 $scope.logintext = 'Log In';
-                LoginStatusService.setLoginText(logintext);
             }
 
             $scope.getUserRole= function () {
@@ -45,7 +46,6 @@
                     });
                 }
             };
-
 
 
             $scope.$on('$routeChangeSuccess', function (e, current, previous) {

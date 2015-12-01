@@ -7,13 +7,16 @@ angular.module('donate')
 
             var logintext= LoginStatusService.getLoginText();
 
-            if(logintext !== 'Log Out'){
-                $scope.logintext = 'Log In';
-                LoginStatusService.setLoginText(logintext);
-            }else{
+            if(logintext === 'Log Out'){
                 $scope.logintext = logintext;
+            }else{
+                $scope.logintext = 'Log In';
             }
 
+            $scope.getUserRole= function () {
+                var userRole = UserAuthorizationService.getRole();
+                return userRole;
+            };
 
             $scope.getWelcomeText = function(){
                 var user = UserAuthorizationService.getUserName();
@@ -25,11 +28,11 @@ angular.module('donate')
                 return false;
             };
 
-
             $scope.loginShow = function () {
 
                 if($scope.logintext === 'Log Out'){
                     $scope.logintext = 'Log In';
+                    LoginStatusService.setLoginText('Log In');
                     $scope.welcometext ='';
                     UserAuthorizationService.setRole('normal');
                     UserAuthorizationService.setUserName('normal');
@@ -37,9 +40,13 @@ angular.module('donate')
                     return true;
                 } else{
                     $scope.logintext = 'Log Out';
+                    LoginStatusService.setLoginText('Log Out');
+                    var dailog = $modal.open({
+                        templateUrl: 'view/login/login.view.html',
+                        controller: 'LoginController'
+                    });
                 }
             };
-
 
 
             $scope.getUserRole= function () {

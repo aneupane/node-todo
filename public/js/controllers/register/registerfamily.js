@@ -6,10 +6,6 @@ angular.module('donate')
         function ( $http ,$scope ,$modal, $location , FamilyService , UserAuthorizationService) {
 
 
-            var displayIndex= 0;
-
-            $scope.displayIndex = displayIndex;
-
             var logintext= $scope.logintext;
 
             if(logintext !== 'Log Out'){
@@ -53,6 +49,9 @@ angular.module('donate')
             };
 
 
+            var displayIndex= 0;
+
+            $scope.displayIndex = displayIndex;
 
             $scope.getNext= function(){
                 displayIndex = $scope.displayIndex;
@@ -98,17 +97,12 @@ angular.module('donate')
                     childimage_0 ='';
                 }
 
-
-
-
                 var childimage_1 ={};
                 try{
                     childimage_1 = $scope.myForm.family.child1.name;
                 }catch(err){
                     childimage_1 ='';
                 }
-
-
 
 
                 var childimage_2 ={};
@@ -118,9 +112,6 @@ angular.module('donate')
                     childimage_2 ='';
                 }
 
-
-
-
                 var wishlist1image_0 ={};
                 try{
                     wishlist1image_0 = $scope.myForm.family.wishlist1_0.name;
@@ -128,16 +119,12 @@ angular.module('donate')
                     wishlist1image_0 ='';
                 }
 
-
-
                 var wishlist2image_0 ={};
                 try{
                     wishlist2image_0 = $scope.myForm.family.wishlist2_0.name;
                 }catch(err){
                     wishlist2image_0 ='';
                 }
-
-
 
                 var wishlist3image_0 ={};
                 try{
@@ -147,9 +134,6 @@ angular.module('donate')
                 }
 
 
-
-
-
                 var wishlist1image_1 ={};
                 try{
                     wishlist1image_1 = $scope.myForm.family.wishlist1_1.name;
@@ -157,16 +141,12 @@ angular.module('donate')
                     wishlist1image_1 ='';
                 }
 
-
-
                 var wishlist2image_1 ={};
                 try{
                     wishlist2image_1 = $scope.myForm.family.wishlist2_1.name;
                 }catch(err){
                     wishlist2image_1 ='';
                 }
-
-
 
                 var wishlist3image_1 ={};
                 try{
@@ -176,22 +156,12 @@ angular.module('donate')
                 }
 
 
-
-
-
-
-
-
-
-
-
                 var wishlist1image_2 ={};
                 try{
                     wishlist1image_2 = $scope.myForm.family.wishlist1_2.name;
                 }catch(err){
                     wishlist1image_2 ='';
                 }
-
 
 
                 var wishlist2image_2 ={};
@@ -209,15 +179,6 @@ angular.module('donate')
                 }catch(err){
                     wishlist3image_2 ='';
                 }
-
-
-
-
-
-
-
-
-
 
 
                 var data = JSON.stringify({
