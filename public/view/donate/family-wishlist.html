@@ -32,50 +32,52 @@
     </div>
 
 
-    <div style="padding-top: 50px;padding-left: 400px"> Family Donation Page </div>
+    <div style="height: 700px">
+        <div style="padding-top: 50px;padding-left: 450px;padding-top: 100px"> <b>Family Donation Page </b></div>
 
-    <div style="width: 70%;height: 90%;padding-left: 30% ; padding-top: 10px">
+        <div style="width: 70%;height: 90%;padding-left: 30% ; padding-top: 50px">
 
-        <table border="1">
-            <tr ng-repeat="p in familyWish">
-                <td ><div>  {{p.child.name}}</div>
-                    <div>
+            <table border="1">
+                <tr ng-repeat="p in familyWish">
+                    <td class="wishlist" ><div>  {{p.child.name}}</div>
                         <div>
-                            <img ng-src="images/{{p.child.image}}" style="width: 50px;height: 50px" />
+                            <div>
+                                <img ng-src="images/{{p.child.image}}" style="width: 50px;height: 50px" />
+                            </div>
                         </div>
-                    </div>
-                </td>
-                <td style="padding-left: 70px">
-                    <table>
-                        <tr ng-repeat="y in p.wishlist">
+                    </td>
+                    <td class="wishlist">
+                        <table>
+                            <tr ng-repeat="y in p.wishlist">
 
-                            <td>
-                            <div> {{y.name}}</div>
-                                 <div>
-                                    <img ng-src="images/{{y.image}}" style="width: 50px;height: 50px" />
-                                 </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <div>
-                        <select id="myselection"
-                                multiple="true"
-                                ng-model="selectedGift"
-                                ng-change="getGiftUpdate(selectedGift)"
-                                ng-options="item.name for item in p.wishlist" >
-                        </select>
-                    </div>
-                </td>
-            </tr>
-        </table>
+                                <td class="wishlist">
+                                    <div> {{y.name}}</div>
+                                    <div>
+                                        <img ng-src="images/{{y.image}}" style="width: 50px;height: 50px" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="wishlist">
+                        <div>
+                            <select id="myselection"
+                                    multiple="true"
+                                    ng-model="selectedGift"
+                                    ng-change="getGiftUpdate(selectedGift)"
+                                    ng-options="item.name for item in p.wishlist" >
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
+
+        </div>
+
+        <div style="padding-left: 470px">
+            <a ng-click="submitDonate()" class="btn btn-primary">Submit Donation</a>
+        </div>
 
     </div>
-
-    <div style="padding-left: 470px">
-        <a ng-click="submitDonate()" class="btn btn-primary">Submit Donation</a>
-    </div>
-
 </div>
