@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35021d6b-5bf4-4f3f-900f-984711a35ebe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/andre.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bag.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bags.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/camers.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/caps.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/earphones.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/evans.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ferry.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/football.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/headphone.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/heater.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/images.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/iphone.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/kelly.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/koyo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/laptop.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/lily.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/naville.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/pirlo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ps4.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ramos.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/rupe.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sachin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sandy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sheren.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shoes.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/skettingboard.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/tablet.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/torres.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/tshirt.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/xbox.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/john.jpg" afterPath="$PROJECT_DIR$/public/images/john.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/register/registerfamily.js" afterPath="$PROJECT_DIR$/public/js/controllers/register/registerfamily.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/donate.html" afterPath="$PROJECT_DIR$/public/view/landing/donate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/home.html" afterPath="$PROJECT_DIR$/public/view/landing/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/register.html" afterPath="$PROJECT_DIR$/public/view/landing/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/register/family.html" afterPath="$PROJECT_DIR$/public/view/register/family.html" />
     </list>
     <ignored path="node-todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -615,7 +578,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448963488231</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="version 2">
+      <created>1448970463290</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1448970463291</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -666,7 +635,8 @@
     <MESSAGE value="final donate submit" />
     <MESSAGE value="transaction and view status" />
     <MESSAGE value="version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1" />
+    <MESSAGE value="version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
