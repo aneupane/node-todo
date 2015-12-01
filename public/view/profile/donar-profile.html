@@ -1,4 +1,13 @@
-<div style="padding-top: 170px">
+<div style="padding-top: 100px">
+
+    <div style="padding-left: 1130px;z-index: 1000">
+        <a ng-click="loginShow()">{{logintext}}</a>
+    </div>
+
+    <div style="padding-left: 0px;z-index: 1000 ;position: absolute ;padding-top: -100px">
+        <a ng-show="getWelcomeText()" >{{welcometext}}</a>
+    </div>
+
 
     <div id='cssmenu' style="position: absolute;z-index: 100">
         <ul>
@@ -12,16 +21,21 @@
             <li ng-show="getUserRole() == 'admin' "><a href='#Admin'><span>Admin</span></a></li>
             <li><a href='#Contact'><span>Contact</span></a></li>
             <li ng-show="getUserRole() == 'family' || getUserRole() == 'donar' ">
-                <a href='#Profile'><span>Profile</span></a>
+            <li ng-show="getUserRole() == 'family' ">
+                <a href='#ProfileFamily'><span>Profile</span></a>
+            </li>
+            <li ng-show=" getUserRole() == 'donar' ">
+                <a href='#ProfileDonar'><span>Profile</span></a>
             </li>
 
         </ul>
 
     </div>
 
-    <div style="padding-top: 100px;padding-left: 150px">
-        <b>Thank you for registering with us.  An admin will respond to your registration within 24-48 hours for your approval </b>
-        <br/>
-        <b> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or denial of an account for receiving donations </b>
+    <div style="height: 1000px ; padding-top: 100px;padding-left: 300px">
+
+      <b>View your Transaction Table </b>
+
     </div>
 </div>
+

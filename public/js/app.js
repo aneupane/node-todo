@@ -11,6 +11,24 @@ config(function ($routeProvider, $sceDelegateProvider) {
             controller: 'HomeController'
         });
 
+
+
+
+    $routeProvider.when('/ProfileFamily',
+        {
+            templateUrl: 'view/profile/family-profile.html',
+            topNav: 'view/header/header.html',
+            controller: 'FamilyProfileController'
+        });
+
+    $routeProvider.when('/ProfileDonar',
+        {
+            templateUrl: 'view/profile/donar-profile.html',
+            topNav: 'view/header/header.html',
+            controller: 'DonarProfileController'
+        });
+
+
     $routeProvider.when('/Faq',
         {
             templateUrl: 'view/landing/faq.html',

@@ -8,19 +8,30 @@
         <a ng-show="getWelcomeText()" >{{welcometext}}</a>
     </div>
 
-    <div id='cssmenu' >
+
+    <div id='cssmenu' style="position: absolute;z-index: 100">
         <ul>
             <li><a href='#Home'><span>Home</span></a></li>
-            <li><a href='#Donate'><span>Donate</span></a></li>
-            <li><a href='#Register'><span>Register</span></a></li>
+            <li ng-show="getUserRole() == 'normal' || getUserRole() == 'donar' " >
+                <a href='#Donate'><span>Donate</span></a></li>
+            <li ng-show= "getUserRole() == 'normal'">
+                <a href='#Register'><span>Register</span></a></li>
             <li><a href='#Faq'><span>FAQ</span></a></li>
             <li><a href='#AboutUs'><span>About US</span></a></li>
-            <li ng-show="showAdmin()" ><a href='#Admin'><span>Admin</span></a></li>
+            <li ng-show="getUserRole() == 'admin' "><a href='#Admin'><span>Admin</span></a></li>
             <li><a href='#Contact'><span>Contact</span></a></li>
+            <li ng-show="getUserRole() == 'family' ">
+                <a href='#ProfileFamily'><span>Profile</span></a>
+            </li>
+            <li ng-show=" getUserRole() == 'donar' ">
+                <a href='#ProfileDonar'><span>Profile</span></a>
+            </li>
+
         </ul>
+
     </div>
 
-    <div style="height: 800px ; padding-left: 250px ; padding-top: 50px ;background-image: image('images/headphone.jpg')">
+    <div style="height: 800px ; padding-left: 250px ; padding-top: 50px">
 
         <b>Happy Holiday Donars is a web based donation service that provide service</b> <br/>
         <b>for needy families. If you are in need , our organization will post your needed items </b><br/>

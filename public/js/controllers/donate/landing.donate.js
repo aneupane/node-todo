@@ -5,7 +5,6 @@ angular.module('donate')
 
         function ($http,$scope ,$location, FamilyService , GiftService ,UserAuthorizationService ,LoginStatusService ) {
 
-
             var logintext= LoginStatusService.getLoginText();
 
             if(logintext !== 'Log Out'){
@@ -14,7 +13,6 @@ angular.module('donate')
             }else{
                 $scope.logintext = logintext;
             }
-
 
             $scope.getWelcomeText = function(){
                 var user = UserAuthorizationService.getUserName();
@@ -41,18 +39,12 @@ angular.module('donate')
                 }
             };
 
-
-
             $scope.getUserRole= function () {
                 var userRole = UserAuthorizationService.getRole();
                 return userRole;
             }
 
             var familydonation ={};
-
-
-
-
 
 
             $scope.submitDonate = function(){
@@ -69,34 +61,17 @@ angular.module('donate')
                 $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/donation/final/submit", data)
                     .success(function (data, status) {
 
-
-
                     });
 
-
-
-
-
                 $location.path('/donate/conformation');
-
-
-
-
-
-
 
             };
 
 
             $scope.getGiftUpdate = function(gift) {
-
-
                 GiftService.addGifts(gift);
-
                 var giftsreceived = GiftService.getGifts();
-
                 $scope.gifts = giftsreceived;
-
             };
 
 
