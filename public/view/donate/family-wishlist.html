@@ -1,4 +1,4 @@
-<div style="padding-top: 100px" ng-controller="HomeController">
+<div style="padding-top: 100px;overflow: auto" ng-controller="HomeController">
     <div style="padding-left: 1130px;z-index: 1000">
         <a ng-click="loginShow()">{{logintext}}</a>
     </div>
@@ -79,10 +79,8 @@
 
 
         </div>
-
-        <div style="padding-left: 470px">
-            <a ng-click="submitDonate()" class="btn btn-primary">Submit Donation</a>
-        </div>
-
     </div>
+</div>
+<div style="padding-left: 470px; padding-top: 50px">
+    <a ng-click="submitDonate()" class="btn btn-primary">Submit Donation</a>
 </div>

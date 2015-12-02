@@ -35,7 +35,7 @@
 
     <div style="padding-top: 100px; height: 600px ; padding-left: 100px ; overflow:scroll">
 
-        <div style="padding-left: 420px">
+        <div style="padding-left: 440px">
             <label for="family" style="padding-left: 40px">Select Family </label> <br/>
             <select style="width: 150px" id="family" ng-options="item as item.name for item in familyList track by item.username"
                     ng-model="familyusername"
@@ -43,11 +43,11 @@
             </select>
         </div>
 
-        <div style="padding-left: 470px ; padding-top: 50px">
-            <label >All Family</label> <br/>
+        <div style="padding-left: 480px ; padding-top: 50px">
+            <label >All Family List</label> <br/>
         </div>
 
-        <div class="list-group middle"  style="height: 90%;width:60%;padding-left: 350px;">
+        <div class="list-group middle"  style="height: 90%;width:60%;padding-left: 380px">
             <!--  Product Container  -->
             <div class="list-group-item" ng-repeat="family in familyList" >
 
