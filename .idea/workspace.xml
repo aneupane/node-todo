@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35021d6b-5bf4-4f3f-900f-984711a35ebe" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/johnny.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/donate/family-wishlist.html" afterPath="$PROJECT_DIR$/public/view/donate/family-wishlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/landing/donate.html" afterPath="$PROJECT_DIR$/public/view/landing/donate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js" afterPath="$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/services/gift.service.js" afterPath="$PROJECT_DIR$/public/js/services/gift.service.js" />
     </list>
     <ignored path="node-todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,49 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/login/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/home/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="donate.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/view/landing/donate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.625">
-              <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="family-wishlist.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="family-wishlist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/view/donate/family-wishlist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.6930091">
-              <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+            <state vertical-scroll-proportion="-9.0">
+              <caret line="84" column="29" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -82,61 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="donar.profile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/profile/donar.profile.js">
+      <file leaf-file-name="landing.donate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="62" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="62" />
+              <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registerdonar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/register/registerdonar.js">
+      <file leaf-file-name="gift.service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/services/gift.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registerdonarconform.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/register/registerdonarconform.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registerfamily.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/register/registerfamily.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registerfamilyconform.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/register/registerfamilyconform.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33157894">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -169,7 +92,6 @@
         <option value="$PROJECT_DIR$/public/js/root.js" />
         <option value="$PROJECT_DIR$/public/view/header/header.html" />
         <option value="$PROJECT_DIR$/public/js/services/giftService.js" />
-        <option value="$PROJECT_DIR$/public/js/services/gift.service.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/view/profile/profile.html" />
         <option value="$PROJECT_DIR$/public/view/landing/contact.html" />
@@ -197,7 +119,6 @@
         <option value="$PROJECT_DIR$/public/js/controllers/contact/contact.submit.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/contact/contact.us.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/donate/donate.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/donate/submit.donate.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/profile/donar.profile.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/profile/family.profile.js" />
@@ -209,6 +130,8 @@
         <option value="$PROJECT_DIR$/public/js/controllers/login/login.js" />
         <option value="$PROJECT_DIR$/public/view/landing/donate.html" />
         <option value="$PROJECT_DIR$/public/view/donate/family-wishlist.html" />
+        <option value="$PROJECT_DIR$/public/js/services/gift.service.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js" />
       </list>
     </option>
   </component>
@@ -419,6 +342,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -449,10 +390,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/js/controllers/contact" />
       <recent name="$PROJECT_DIR$/public/js/controllers/aboutus" />
       <recent name="$PROJECT_DIR$/public/js/controllers/register" />
-      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/js/controllers/profile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -635,7 +576,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449003888430</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Final">
+      <created>1449067835455</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1449067835455</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -691,7 +638,8 @@
     <MESSAGE value="version 4" />
     <MESSAGE value="version 5" />
     <MESSAGE value="version 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 6" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -700,14 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/todo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1050,14 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/donate/submit.donate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1164,11 +1096,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/view/landing/donate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.625">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        <state vertical-scroll-proportion="-3.0416667">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
@@ -1180,8 +1113,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/view/donate/family-wishlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.6930091">
-          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+        <state vertical-scroll-proportion="-9.0">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1192,6 +1125,22 @@
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/donate/landing.donate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/services/gift.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33157894">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

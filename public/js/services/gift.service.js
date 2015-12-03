@@ -10,6 +10,8 @@ angular.module('app')
         return {
             getGifts: function () {
                 return gifts.item;
+            },setGifts: function (id) {
+                 gifts.item =id;
             },
             addGifts: function (gift) {
 

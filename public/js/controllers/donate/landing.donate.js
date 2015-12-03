@@ -69,6 +69,8 @@ angular.module('donate')
 
                 $http.post("http://localhost:8090/ksu-capstone-project-app/rest/userservice/donation/final/submit", data)
                     .success(function (data, status) {
+                        var emptyGift =[];
+                        GiftService.setGifts(emptyGift);
 
                     });
 
